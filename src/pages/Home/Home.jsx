@@ -1,11 +1,13 @@
 import "./Home.scss";
-import Container from "../../components/Container/Container";
-import { Link } from "react-router-dom";
+// import Container from "../../components/Container/Container";
+// import TitleBox from "../../components/TitleBox/TitleBox";
+import BubbleContainer from "../../components/BubbleContainer/BubbleContainer";
+// import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <main className="home">
-      <h1>Abi Carson-Brown</h1>
+      {/* <TitleBox title="Abi Carson-Brown" />
       <Link to="/about">
         <Container title="About" />
       </Link>
@@ -14,7 +16,8 @@ export default function Home() {
       </Link>
       <Link to="/contact">
         <Container title="Contact" />
-      </Link>
+      </Link> */}
+      <BubbleContainer titles={["About", "Projects", "Contact"]} />
     </main>
   );
 }
