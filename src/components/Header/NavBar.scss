@@ -1,18 +1,12 @@
 .nav-bar {
-  display: grid;
-  width: 70vw;
-  background-color: yellow;
-  border-radius: 50rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: pink;
 
   &__link {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    background-color: pink;
-    display: grid;
-    align-items: center;
-    justify-content: center;
     color: white;
     text-transform: capitalize;
+    padding: 1rem;
   }
 }

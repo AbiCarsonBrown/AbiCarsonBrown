@@ -2,3 +2,7 @@
 @use "./partials/typography";
 @use "./partials/mixins" as *;
 @use "./partials/variables" as *;
+
+.active {
+  color: red;
+}
