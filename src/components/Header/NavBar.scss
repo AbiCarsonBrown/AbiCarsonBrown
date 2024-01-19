@@ -1,4 +1,4 @@
-.header {
+.nav-bar {
   display: grid;
   width: 70vw;
   background-color: yellow;
@@ -10,6 +10,9 @@
     border-radius: 50%;
     background-color: pink;
     display: grid;
+    align-items: center;
+    justify-content: center;
     color: white;
+    text-transform: capitalize;
   }
 }
