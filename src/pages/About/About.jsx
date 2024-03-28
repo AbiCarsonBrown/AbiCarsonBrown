@@ -39,6 +39,7 @@ export default function About() {
         <li>MS Excel</li>
         <li>SquareSpace</li>
         <li>Jira</li>
+        <li>Vite</li>
       </ul>
     </main>
   );
