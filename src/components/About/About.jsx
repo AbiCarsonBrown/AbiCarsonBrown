@@ -21,7 +21,7 @@ export default function About() {
           people's lives through innovative software solutions.
         </p>
         <p>Languages/skills: </p>
-        <ul>
+        {/* <ul>
           <li>HTML5</li>
           <li>CSS</li>
           <li>Sass</li>
@@ -45,7 +45,7 @@ export default function About() {
           <li>SquareSpace</li>
           <li>Jira</li>
           <li>Vite</li>
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

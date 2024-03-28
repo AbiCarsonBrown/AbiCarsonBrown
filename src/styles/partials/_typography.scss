@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Sansita";
+  src: url("/src/assets/sansita/sansita-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sansita Swashed";
+  src: url("/src/assets/sansita-swashed/sansita-swashed-regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "Sansita", serif;
+}
