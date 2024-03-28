@@ -3,7 +3,7 @@ import "./Projects.scss";
 export default function Projects() {
   return (
     <section className="projects">
-      <h1 className="projects__title">Projects</h1>
+      <h3 className="projects__title">Projects</h3>
       <div className="project">
         <a
           className="project__link"
