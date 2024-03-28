@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="about">
+    <section className="about">
       <h1 className="about__title">About</h1>
       <p>
         Hi, I'm Abi, a Software Engineer with a unique journey. My background
@@ -41,6 +41,6 @@ export default function About() {
         <li>Jira</li>
         <li>Vite</li>
       </ul>
-    </main>
+    </section>
   );
 }
