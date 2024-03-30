@@ -5,14 +5,19 @@
   &__container {
     padding: 1.25rem 1.2rem 1.25rem 1.25rem;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 480px;
 
     @include mobile-m {
       padding: 1.38rem;
     }
 
     @include mobile-l {
-      padding: 1.55rem 1.47rem 1.47rem 1.55rem;
+      padding: 1.55rem 1.5rem 1.47rem 1.55rem;
+    }
+
+    @include tablet {
+      padding: 2rem 2rem 1.47rem 2rem;
+      max-width: 1280px;
     }
   }
 
@@ -27,7 +32,12 @@
     }
 
     @include mobile-l {
-      grid-template-rows: repeat(18, 25px);
+      grid-template-rows: repeat(19, 25px);
+    }
+
+    @include tablet {
+      grid-template-rows: repeat(18, 32px);
+      grid-template-columns: repeat(22, 32px);
     }
   }
 
@@ -47,6 +57,13 @@
   &__subtitle {
     color: $accent;
     text-align: center;
+
+    @include mobile-l {
+      align-self: flex-start;
+    }
+    @include tablet {
+      border-right: none;
+    }
   }
 
   &__title {
@@ -57,6 +74,16 @@
     @include mobile-m {
       padding-bottom: 0.25rem;
     }
+
+    @include mobile-l {
+      font-size: 2rem;
+    }
+
+    @include tablet {
+      font-size: 2.25rem;
+      grid-column-start: 1;
+      grid-column-end: 11;
+    }
   }
 
   &__subtitle {
@@ -64,6 +91,16 @@
     padding-bottom: 0.25rem;
     grid-row-start: 3;
     grid-row-end: 5;
+
+    @include mobile-l {
+      font-size: 1.75rem;
+    }
+
+    @include tablet {
+      font-size: 2rem;
+      grid-column-start: 1;
+      grid-column-end: 11;
+    }
   }
 
   &__content {
@@ -78,7 +115,17 @@
 
     @include mobile-l {
       font-size: 1rem;
+      grid-row-end: 19;
+    }
+
+    @include tablet {
+      font-size: 1.25rem;
+      grid-column-start: 12;
+      grid-column-end: 30;
+      grid-row-start: 1;
       grid-row-end: 18;
+      padding: 0.4rem 0.75rem;
+      align-content: flex-start;
     }
   }
 }

@@ -25,6 +25,10 @@ body {
   @include mobile-l {
     background-size: 25px 25px;
   }
+
+  @include tablet {
+    background-size: 32px 32px;
+  }
 }
 
 li {

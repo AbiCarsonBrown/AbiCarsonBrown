@@ -13,14 +13,16 @@ export default function About() {
             background includes studying Mathematics at university and a
             rewarding 5-year tenure in Fashion Merchandising, primarily at ASOS.
             Following my time at ASOS, I ventured into other merchandising
-            roles, but I yearned for a more challenging path. With a passion for
-            problem-solving and a knack for diving into tasks headfirst, a
-            friend introduced me to the world of Software Engineering. This
-            sparked my interest, leading me to enrol in a BrainStation bootcamp.
-            Now, with these new skills, both Front-End and Back-End, under my
-            belt, I’m excited to apply what I have learned to real world
-            projects. My mission is to bring joy to people's lives through
-            innovative software solutions.
+            roles, but I yearned for a more challenging path.
+            <br />
+            <br />
+            With a passion for problem-solving and a knack for diving into tasks
+            headfirst, a friend introduced me to the world of Software
+            Engineering. This sparked my interest, leading me to enrol in a
+            BrainStation bootcamp. Now, with these new skills, both Front-End
+            and Back-End, under my belt, I’m excited to apply what I have
+            learned to real world projects. My mission is to bring joy to
+            people's lives through innovative software solutions.
           </p>
         </div>
         <Stack />
