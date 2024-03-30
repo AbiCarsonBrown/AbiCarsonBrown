@@ -17,7 +17,12 @@
 
     @include tablet {
       padding: 2rem 2rem 1.47rem 2rem;
-      max-width: 1280px;
+      max-width: 1024px;
+    }
+
+    @include laptop {
+      padding: 2.2rem 2.2rem 1.47rem 2.2rem;
+      max-width: $desktop;
     }
   }
 
@@ -38,6 +43,11 @@
     @include tablet {
       grid-template-rows: repeat(18, 32px);
       grid-template-columns: repeat(22, 32px);
+    }
+
+    @include laptop {
+      grid-template-rows: repeat(15, 35.3px);
+      grid-template-columns: repeat(27, 35.3px);
     }
   }
 
@@ -84,6 +94,10 @@
       grid-column-start: 1;
       grid-column-end: 11;
     }
+
+    @include laptop {
+      font-size: 2.5rem;
+    }
   }
 
   &__subtitle {
@@ -100,6 +114,10 @@
       font-size: 2rem;
       grid-column-start: 1;
       grid-column-end: 11;
+    }
+
+    @include laptop {
+      font-size: 2.25rem;
     }
   }
 
@@ -126,6 +144,11 @@
       grid-row-end: 18;
       padding: 0.4rem 0.75rem;
       align-content: flex-start;
+    }
+
+    @include laptop {
+      font-size: 1.5rem;
+      grid-row-end: 15;
     }
   }
 }

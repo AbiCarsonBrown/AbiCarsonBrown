@@ -17,6 +17,7 @@ body {
   background-image: linear-gradient(to right, $grid-line 1px, transparent 1px),
     linear-gradient(to bottom, $grid-line 1px, transparent 1px);
   background-color: $primary-background;
+  margin: 0 auto;
 
   @include mobile-m {
     background-size: 22px 22px;
@@ -29,6 +30,14 @@ body {
   @include tablet {
     background-size: 32px 32px;
   }
+
+  @include laptop {
+    background-size: 35.3px 35.3px;
+  }
+}
+
+.app {
+  display: grid;
 }
 
 li {
