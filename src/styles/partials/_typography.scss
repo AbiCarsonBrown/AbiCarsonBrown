@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @font-face {
   font-family: "Sansita";
   src: url("/src/assets/sansita/sansita-regular.ttf") format("truetype");
@@ -15,4 +17,5 @@
 
 * {
   font-family: "Sansita", serif;
+  color: $primary;
 }

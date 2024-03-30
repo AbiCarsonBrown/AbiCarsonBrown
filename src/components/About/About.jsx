@@ -7,7 +7,7 @@ export default function About() {
         <h1 className="about__title">Abi Carson-Brown</h1>
         <h2 className="about__subtitle">Software Engineer</h2>
         <h3 className="about__heading">About</h3>
-        <p>
+        <p className="about__content">
           Hi, I'm Abi, a Software Engineer with a unique journey. My background
           includes studying Mathematics at university and a rewarding 5-year
           tenure in Fashion Merchandising, primarily at ASOS. Following my time
