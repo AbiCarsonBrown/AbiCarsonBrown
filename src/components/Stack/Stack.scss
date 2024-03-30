@@ -1,1 +1,8 @@
 @use "../../styles/partials/variables" as *;
+
+.stack {
+  &__title {
+    background-color: $primary-background;
+    border: solid $grid-line 1px;
+  }
+}

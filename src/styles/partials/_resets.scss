@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 *,
 *::before,
@@ -16,6 +17,14 @@ body {
   background-image: linear-gradient(to right, $grid-line 1px, transparent 1px),
     linear-gradient(to bottom, $grid-line 1px, transparent 1px);
   background-color: $primary-background;
+
+  @include mobile-m {
+    background-size: 22px 22px;
+  }
+
+  @include mobile-l {
+    background-size: 25px 25px;
+  }
 }
 
 li {

@@ -1,9 +1,10 @@
 import "./Stack.scss";
 
 export default function Stack() {
-  <section className="stack">
-    <h3 className="stack__title">Languages/skills: </h3>
-    {/* <ul className="stack__list">
+  return (
+    <section className="stack">
+      <h3 className="stack__title">My Tech Stack </h3>
+      {/* <ul className="stack__list">
     <li>HTML5</li>
     <li>CSS</li>
     <li>Sass</li>
@@ -23,10 +24,9 @@ export default function Stack() {
     <li>GitHub</li>
     <li>Agile</li>
     <li>Jest</li>
-    <li>MS Excel</li>
-    <li>SquareSpace</li>
     <li>Jira</li>
     <li>Vite</li>
   </ul> */}
-  </section>;
+    </section>
+  );
 }
