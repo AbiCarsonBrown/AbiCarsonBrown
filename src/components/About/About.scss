@@ -7,19 +7,13 @@
   }
 
   &__title,
-  &__subtitle,
-  &__heading,
-  &__content {
-    background-color: $primary-background;
-  }
-
-  &__title,
   &__subtitle {
+    background-color: $primary-background;
     color: $accent;
     text-align: center;
     width: 17.45rem;
-    margin: 0.05rem 0 0.05rem 0.05rem;
     padding-bottom: 0.25rem;
+    margin: 0.05rem 0 0.05rem 0.05rem;
   }
 
   &__title {
@@ -31,5 +25,29 @@
     align-items: center;
     font-size: 1.5rem;
     height: 2.44rem;
+  }
+}
+
+.intro {
+  &__title,
+  &__content {
+    background-color: $primary-background;
+  }
+
+  &__title {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin: 1.25rem 0 0 0.05rem;
+    font-size: 1.5rem;
+    height: 2.44rem;
+    width: 6.2rem;
+    padding-bottom: 0.25rem;
+  }
+
+  &__content {
+    font-size: 0.9rem;
+    border: solid $grid-line 1px;
+    padding: 0.25rem 0.5rem;
   }
 }
