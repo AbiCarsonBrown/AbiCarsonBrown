@@ -2,18 +2,24 @@
 
 .about {
   &__container {
-    padding: 1.25rem;
+    padding: 1.25rem 1.25rem;
     display: grid;
   }
 
   &__title,
-  &__subtitle {
+  &__subtitle,
+  &__content {
     background-color: $primary-background;
+    border: solid $grid-line 1px;
+  }
+
+  &__title,
+  &__subtitle {
     color: $accent;
     text-align: center;
-    width: 17.45rem;
-    padding-bottom: 0.25rem;
-    margin: 0.05rem 0 0.05rem 0.05rem;
+    width: 17.55rem;
+    height: 2.5rem;
+    border-bottom: none;
   }
 
   &__title {
@@ -24,6 +30,13 @@
     display: grid;
     align-items: center;
     font-size: 1.5rem;
-    height: 2.44rem;
+    padding-bottom: 0.25rem;
+  }
+
+  &__content {
+    background-color: $primary-background;
+    font-size: 0.9rem;
+    margin: 1.25rem 0;
+    padding: 0.25rem 0.5rem;
   }
 }
