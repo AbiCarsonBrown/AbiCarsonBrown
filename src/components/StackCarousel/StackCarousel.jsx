@@ -20,30 +20,30 @@ import Vite from "../../assets/icons/Vite.svg";
 
 export default function StackCarousel() {
   const stack = [
-    HTMLIcon,
-    CSSIcon,
-    JSIcon,
-    Sass,
-    ReactIcon,
-    TypeScript,
-    Git,
-    GitHub,
-    Node,
-    Express,
-    MySQL,
-    Knex,
-    Jira,
-    Vite,
-    Heroku,
-    Vercel,
-    Jest,
+    { name: "HTML5", icon: HTMLIcon },
+    { name: "CSS3", icon: CSSIcon },
+    { name: "JavaScript", icon: JSIcon },
+    { name: "Sass", icon: Sass },
+    { name: "React.js", icon: ReactIcon },
+    { name: "TypeScript", icon: TypeScript },
+    { name: "Git", icon: Git },
+    { name: "GitHub", icon: GitHub },
+    { name: "Node.js", icon: Node },
+    { name: "Express", icon: Express },
+    { name: "MySQL", icon: MySQL },
+    { name: "Knex.js", icon: Knex },
+    { name: "Jira", icon: Jira },
+    { name: "Vite.js", icon: Vite },
+    { name: "Heroku", icon: Heroku },
+    { name: "Vercel", icon: Vercel },
+    { name: "Jest", icon: Jest },
   ];
 
   return (
     <div className="carousel">
       {stack.map((item, index) => (
         <div key={index} className="carousel__item">
-          <img src={item} alt="" />
+          <img src={item.icon} alt={item.name} />
         </div>
       ))}
     </div>
