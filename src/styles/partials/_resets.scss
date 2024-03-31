@@ -39,6 +39,8 @@ body {
 
 .app {
   display: grid;
+  max-width: 300px;
+  margin: 1.25rem auto;
 }
 
 li {
