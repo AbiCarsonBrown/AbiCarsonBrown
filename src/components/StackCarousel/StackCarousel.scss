@@ -1,18 +1,19 @@
 @use "../../styles/partials/variables" as *;
 
 .carousel {
-  background-color: $primary-background;
-  display: flex;
-  flex-wrap: nowrap;
+  display: grid;
   grid-row-start: 4;
   grid-row-end: 8;
   animation: 10s linear 1s infinite alternate slidein;
+  grid-template-columns: repeat(17, 80px);
 
   &__item {
     margin: 0.25rem;
     aspect-ratio: 1/1;
+    height: 72px;
   }
 }
+
 @keyframes slidein {
   from {
     transform: translateX(20vw);

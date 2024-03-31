@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "./StackCarousel.scss";
 import CSSIcon from "../../assets/icons/CSS3.svg";
 import Express from "../../assets/icons/Express.svg";
@@ -42,9 +41,12 @@ export default function StackCarousel() {
   return (
     <div className="carousel">
       {stack.map((item, index) => (
-        <div key={index} className="carousel__item">
-          <img src={item.icon} alt={item.name} />
-        </div>
+        <img
+          key={index}
+          src={item.icon}
+          alt={item.name}
+          className="carousel__item"
+        />
       ))}
     </div>
   );

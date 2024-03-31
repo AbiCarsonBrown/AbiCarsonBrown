@@ -3,7 +3,7 @@
 
 .about {
   display: grid;
-  grid-template-rows: repeat(23, 20px);
+  grid-template-rows: repeat(26, 20px);
 
   &__container {
     @include mobile-m {

@@ -20,7 +20,7 @@ export default function About() {
         projects. My mission is to bring joy to people's lives through
         innovative software solutions.
       </p>
-      {/* <Stack /> */}
+      <Stack />
     </section>
   );
 }
