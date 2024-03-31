@@ -16,6 +16,7 @@ body {
   background-size: 20px 20px;
   background-image: linear-gradient(to right, $grid-line 1px, transparent 1px),
     linear-gradient(to bottom, $grid-line 1px, transparent 1px);
+  background-position-x: center;
   background-color: $primary-background;
   margin: 0 auto;
 

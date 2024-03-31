@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as *;
+
+.carousel {
+  background-color: $primary-background;
+  display: flex;
+  flex-wrap: nowrap;
+  grid-row-start: 4;
+  grid-row-end: 8;
+  animation: 10s linear 1s infinite alternate slidein;
+
+  &__item {
+    margin: 0.25rem;
+    aspect-ratio: 1/1;
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translateX(20vw);
+  }
+  to {
+    transform: translateX(-350vw);
+  }
+}
