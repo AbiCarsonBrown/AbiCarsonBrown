@@ -41,13 +41,11 @@ export default function StackCarousel() {
 
   return (
     <div className="carousel">
-      {stack.map((item, index) => {
-        return (
-          <div key={index} className="carousel__item">
-            <img src={item} alt="" />
-          </div>
-        );
-      })}
+      {stack.map((item, index) => (
+        <div key={index} className="carousel__item">
+          <img src={item} alt="" />
+        </div>
+      ))}
     </div>
   );
 }
