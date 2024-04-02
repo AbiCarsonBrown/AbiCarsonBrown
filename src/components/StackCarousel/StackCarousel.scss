@@ -4,10 +4,23 @@
 .carousel {
   display: grid;
   grid-row-start: 4;
-  grid-row-end: 6;
+  grid-row-end: 7;
   grid-column-start: 1;
   grid-column-end: 16;
   padding-left: 100%;
+
+  @include tablet {
+    grid-row-end: 6;
+    grid-column-end: 14;
+  }
+
+  @include laptop {
+    grid-column-end: 18;
+  }
+
+  @include desktop {
+    grid-column-end: 24;
+  }
 
   &__wrapper {
     display: grid;
@@ -24,7 +37,15 @@
     }
 
     @include tablet {
-      grid-template-columns: repeat(22, 96px);
+      grid-template-columns: repeat(24, 64px);
+    }
+
+    @include laptop {
+      grid-template-columns: repeat(26, 72px);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(29, 72px);
     }
   }
 
@@ -42,14 +63,18 @@
     }
 
     @include tablet {
-      height: 88px;
+      height: 56px;
+    }
+
+    @include laptop {
+      height: 64px;
     }
   }
 }
 
 @keyframes slidein {
   from {
-    transform: translateX(5%);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(-100%);

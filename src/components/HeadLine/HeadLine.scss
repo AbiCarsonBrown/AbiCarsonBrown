@@ -17,6 +17,10 @@
     grid-template-rows: repeat(5, 32px);
   }
 
+  @include laptop {
+    grid-template-rows: repeat(5, 36px);
+  }
+
   &__title,
   &__subtitle {
     display: grid;

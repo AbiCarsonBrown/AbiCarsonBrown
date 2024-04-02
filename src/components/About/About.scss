@@ -14,12 +14,17 @@
   }
 
   @include tablet {
-    grid-template-rows: repeat(22, 32px);
+    grid-template-rows: repeat(21, 32px);
     padding-left: 2rem;
   }
 
   @include laptop {
-    grid-template-rows: repeat(15, 36px);
+    grid-template-rows: repeat(18, 36px);
+    padding-left: 2.25rem;
+  }
+
+  @include laptop {
+    grid-template-rows: repeat(16, 36px);
   }
 
   &__content {
@@ -52,7 +57,12 @@
     }
 
     @include laptop {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+      grid-row-end: 12;
+    }
+
+    @include desktop {
+      grid-row-end: 10;
     }
   }
 }

@@ -26,6 +26,19 @@
     grid-template-columns: repeat(18, 32px);
   }
 
+  @include laptop {
+    grid-template-rows: repeat(6, 36px);
+    grid-template-columns: repeat(18, 36px);
+    grid-row-start: 13;
+    grid-row-end: 19;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(23, 36px);
+    grid-row-start: 11;
+    grid-row-end: 17;
+  }
+
   &__title {
     display: grid;
     align-items: center;
@@ -52,6 +65,10 @@
       border-right: none;
       font-size: 1.6rem;
       grid-column-end: 7;
+    }
+
+    @include laptop {
+      font-size: 1.75rem;
     }
   }
 }
