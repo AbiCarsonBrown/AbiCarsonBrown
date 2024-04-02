@@ -56,7 +56,7 @@ body {
     max-width: 736px;
     margin: 2rem auto;
     padding: 0;
-    grid-template-columns: repeat(2, 368px);
+    grid-template-columns: 288px 448px;
   }
 
   @include laptop {

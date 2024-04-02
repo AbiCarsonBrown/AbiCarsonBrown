@@ -15,7 +15,6 @@
 
   @include tablet {
     grid-template-rows: repeat(5, 32px);
-    padding-right: 1rem;
   }
 
   &__title,
