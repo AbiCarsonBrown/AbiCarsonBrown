@@ -3,4 +3,26 @@
 
 .contact {
   height: calc($mobile-s-grid * 4);
+
+  &__icon {
+    margin: 0.25rem;
+    aspect-ratio: 1/1;
+    height: calc($mobile-s-grid * 3 - 0.5rem);
+
+    @include mobile-m {
+      height: calc($mobile-m-grid * 3 - 0.5rem);
+    }
+
+    @include mobile-l {
+      height: calc($mobile-l-grid * 3 - 0.5rem);
+    }
+
+    @include tablet {
+      height: calc($tablet-grid * 2 - 0.5rem);
+    }
+
+    @include laptop {
+      height: calc($laptop-grid * 2 - 0.5rem);
+    }
+  }
 }
