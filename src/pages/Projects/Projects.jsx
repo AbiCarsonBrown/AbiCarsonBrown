@@ -23,7 +23,6 @@ export default function Projects() {
 
   return (
     <main className="projects">
-      <h3 className="projects__title">Projects</h3>
       <ul className="projects__list">
         {projects.map((project, index) => (
           <Project key={index} project={project} />

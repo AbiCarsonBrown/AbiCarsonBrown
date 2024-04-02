@@ -33,12 +33,8 @@
     grid-template-columns: repeat(23, $laptop-grid);
   }
 
-  &__title {
-    @include text-box;
-  }
-
   &__list {
-    grid-row-start: 4;
+    grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 16;
 
