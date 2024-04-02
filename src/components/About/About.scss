@@ -3,14 +3,14 @@
 
 .about {
   display: grid;
-  grid-template-rows: repeat(26, 20px);
+  grid-template-rows: repeat(25, 20px);
 
   @include mobile-m {
-    grid-template-rows: repeat(23, 22px);
+    grid-template-rows: repeat(22, 22px);
   }
 
   @include mobile-l {
-    grid-template-rows: repeat(23, 25px);
+    grid-template-rows: repeat(22, 25px);
   }
 
   @include tablet {

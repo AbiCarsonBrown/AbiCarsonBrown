@@ -4,38 +4,46 @@
 .carousel {
   display: grid;
   grid-row-start: 4;
-  grid-row-end: 8;
-  animation: 10s linear 1s infinite alternate slidein;
-  grid-template-columns: repeat(17, 80px);
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 16;
+  padding-left: 100%;
 
-  @include mobile-m {
-    grid-template-columns: repeat(17, 88px);
-  }
+  &__wrapper {
+    display: grid;
+    padding-right: 100%;
+    grid-template-columns: repeat(22, 60px);
+    animation: 8s linear infinite slidein;
 
-  @include mobile-l {
-    grid-template-columns: repeat(17, 100px);
+    @include mobile-m {
+      grid-template-columns: repeat(22, 66px);
+    }
+
+    @include mobile-l {
+      grid-template-columns: repeat(22, 75px);
+    }
   }
 
   &__item {
     margin: 0.25rem;
     aspect-ratio: 1/1;
-    height: 72px;
+    height: 52px;
 
     @include mobile-m {
-      height: 80px;
+      height: 58px;
     }
 
     @include mobile-l {
-      height: 92px;
+      height: 67px;
     }
   }
 }
 
 @keyframes slidein {
   from {
-    transform: translateX(10%);
+    transform: translateX(0);
   }
   to {
-    transform: translateX(-350vw);
+    transform: translateX(-100%);
   }
 }
