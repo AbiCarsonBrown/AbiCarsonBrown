@@ -64,12 +64,13 @@ body {
     max-width: $laptop;
     margin: $laptop-grid auto;
     padding: 0 1.6rem;
-    grid-template-columns: calc($laptop-grid * 9) auto;
+    grid-template-columns: calc($laptop-grid * 9) calc($laptop-grid * 18);
   }
 
   @include desktop {
     max-width: $desktop;
     padding: 0 2.9rem;
+    grid-template-columns: calc($laptop-grid * 9 - 1px) auto;
   }
 }
 
