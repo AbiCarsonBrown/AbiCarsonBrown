@@ -32,7 +32,7 @@ body {
   }
 
   @include laptop {
-    background-size: 35.3px 35.3px;
+    background-size: 36px 36px;
   }
 }
 
@@ -53,11 +53,15 @@ body {
   }
 
   @include tablet {
+    max-width: 736px;
     margin: 2rem auto;
+    padding: 0;
+    grid-template-columns: repeat(2, 368px);
   }
 
   @include laptop {
-    margin: 2.2rem auto;
+    max-width: 1280px;
+    margin: 2.25rem auto;
   }
 }
 
