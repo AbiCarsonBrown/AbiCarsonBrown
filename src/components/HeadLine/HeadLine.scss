@@ -3,22 +3,22 @@
 
 .headline {
   display: grid;
-  grid-template-rows: repeat(5, $mobile-s-grid);
+  grid-template-rows: repeat(8, $mobile-s-grid);
 
   @include mobile-m {
-    grid-template-rows: repeat(5, $mobile-m-grid);
+    grid-template-rows: repeat(8, $mobile-m-grid);
   }
 
   @include mobile-l {
-    grid-template-rows: repeat(5, $mobile-l-grid);
+    grid-template-rows: repeat(8, $mobile-l-grid);
   }
 
   @include tablet {
-    grid-template-rows: repeat(5, $tablet-grid);
+    grid-template-rows: repeat(11, $tablet-grid);
   }
 
   @include laptop {
-    grid-template-rows: repeat(5, $laptop-grid);
+    grid-template-rows: repeat(11, $laptop-grid);
   }
 
   &__title,

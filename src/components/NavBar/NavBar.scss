@@ -1,12 +1,50 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .nav-bar {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: pink;
+  display: grid;
+  grid-row-start: 6;
+  grid-row-end: 8;
+  grid-template-columns: repeat(2, 50%);
+
+  @include tablet {
+    grid-template-rows: repeat(6, $tablet-grid);
+    grid-row-end: 11;
+  }
+
+  @include laptop {
+    grid-template-rows: repeat(6, $laptop-grid);
+    grid-row-end: 11;
+  }
 
   &__link {
-    color: white;
-    text-transform: capitalize;
-    padding: 1rem;
+    @include text-box;
+    text-align: center;
+
+    @include tablet {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      margin-bottom: $tablet-grid;
+    }
+
+    &--about {
+      border-right: none;
+
+      @include tablet {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    }
+
+    &--projects {
+      @include tablet {
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
+    }
   }
+}
+
+.active {
+  color: red;
 }

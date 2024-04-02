@@ -8,12 +8,6 @@ import Contact from "./components/Contact/Contact.jsx";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
-  const titles = [
-    { title: "about" },
-    { title: "projects" },
-    { title: "contact" },
-  ];
-
   return (
     <div className="app">
       <BrowserRouter>
