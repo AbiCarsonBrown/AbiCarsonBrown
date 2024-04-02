@@ -18,7 +18,6 @@ body {
     linear-gradient(to bottom, $grid-line 1px, transparent 1px);
   background-position-x: center;
   background-color: $primary-background;
-  margin: 0 auto;
 
   @include mobile-m {
     background-size: 22px 22px;
@@ -41,6 +40,25 @@ body {
   display: grid;
   max-width: 300px;
   margin: 1.25rem auto;
+
+  @include mobile-m {
+    max-width: 330px;
+    margin: 1.38rem auto;
+  }
+
+  @include mobile-l {
+    max-width: 500px;
+    margin: 1.55rem auto;
+    padding: 0 1.55rem;
+  }
+
+  @include tablet {
+    margin: 2rem auto;
+  }
+
+  @include laptop {
+    margin: 2.2rem auto;
+  }
 }
 
 li {

@@ -5,53 +5,30 @@
   display: grid;
   grid-template-rows: repeat(26, 20px);
 
-  &__container {
-    @include mobile-m {
-      padding: 1.38rem;
-    }
-
-    @include mobile-l {
-      padding: 1.55rem 1.5rem 1.47rem 1.55rem;
-    }
-
-    @include tablet {
-      padding: 2rem 2rem 1.47rem 2rem;
-      max-width: 1024px;
-    }
-
-    @include laptop {
-      padding: 2.2rem 2.2rem 1.47rem 2.2rem;
-      max-width: $desktop;
-    }
+  @include mobile-m {
+    grid-template-rows: repeat(23, 22px);
   }
 
-  &__intro {
-    @include mobile-m {
-      grid-template-rows: repeat(19, 22px);
-    }
+  @include mobile-l {
+    grid-template-rows: repeat(23, 25px);
+  }
 
-    @include mobile-l {
-      grid-template-rows: repeat(19, 25px);
-    }
+  @include tablet {
+    grid-template-rows: repeat(18, 32px);
+    grid-template-columns: repeat(22, 32px);
+  }
 
-    @include tablet {
-      grid-template-rows: repeat(18, 32px);
-      grid-template-columns: repeat(22, 32px);
-    }
-
-    @include laptop {
-      grid-template-rows: repeat(15, 35.3px);
-      grid-template-columns: repeat(27, 35.3px);
-    }
+  @include laptop {
+    grid-template-rows: repeat(15, 35.3px);
+    grid-template-columns: repeat(27, 35.3px);
   }
 
   &__content {
     display: grid;
     align-items: center;
     background-color: $primary-background;
-    border: solid $grid-line 1px;
-    border-bottom: none;
-    border-right: none;
+    border-top: solid $grid-line 1px;
+    border-left: solid $grid-line 1px;
     height: 100%;
     width: 100%;
     font-size: 0.9rem;
@@ -61,12 +38,12 @@
     line-height: 1.25;
 
     @include mobile-m {
-      grid-row-end: 19;
+      border-right: solid $grid-line 1px;
+      grid-row-end: 15;
     }
 
     @include mobile-l {
       font-size: 1rem;
-      grid-row-end: 19;
     }
 
     @include tablet {

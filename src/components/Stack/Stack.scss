@@ -1,4 +1,5 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .stack {
   display: grid;
@@ -8,17 +9,40 @@
   grid-row-start: 19;
   grid-row-end: 26;
 
+  @include mobile-m {
+    grid-template-rows: repeat(7, 22px);
+    grid-template-columns: repeat(15, 22px);
+    grid-row-start: 16;
+    grid-row-end: 23;
+  }
+
+  @include mobile-l {
+    grid-template-rows: repeat(7, 25px);
+    grid-template-columns: repeat(15, 25px);
+    grid-row-start: 16;
+    grid-row-end: 23;
+  }
+
   &__title {
     display: grid;
     align-items: center;
+    text-align: center;
     background-color: $primary-background;
-    border: solid $grid-line 1px;
-    border-bottom: none;
-    border-right: none;
+    border-top: solid $grid-line 1px;
+    border-left: solid $grid-line 1px;
     padding: 0 0.55rem 0.25rem 0.55rem;
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 8;
+    font-size: 1.25rem;
+
+    @include mobile-m {
+      border-right: solid $grid-line 1px;
+    }
+
+    @include mobile-l {
+      font-size: 1.5rem;
+    }
   }
 }
