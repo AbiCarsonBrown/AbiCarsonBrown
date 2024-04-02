@@ -6,6 +6,30 @@
   grid-template-rows: repeat(3, $mobile-s-grid);
   grid-template-columns: repeat(15, $mobile-s-grid);
 
+  @include mobile-m {
+    grid-template-rows: repeat(3, $mobile-m-grid);
+    grid-template-columns: repeat(15, $mobile-m-grid);
+  }
+
+  @include mobile-l {
+    grid-template-rows: repeat(3, $mobile-l-grid);
+    grid-template-columns: repeat(18, $mobile-l-grid);
+  }
+
+  @include tablet {
+    grid-template-rows: repeat(3, $tablet-grid);
+    grid-template-columns: repeat(18, $tablet-grid);
+  }
+
+  @include laptop {
+    grid-template-rows: repeat(3, $laptop-grid);
+    grid-template-columns: repeat(18, $laptop-grid);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(23, $laptop-grid);
+  }
+
   &__title {
     @include text-box;
   }
