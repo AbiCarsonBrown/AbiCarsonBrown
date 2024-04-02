@@ -37,43 +37,6 @@ body {
   }
 }
 
-.app {
-  display: grid;
-  max-width: calc($mobile-s-grid * 15);
-  margin: $mobile-s-grid auto;
-
-  @include mobile-m {
-    max-width: calc($mobile-m-grid * 15);
-    margin: $mobile-m-grid auto;
-  }
-
-  @include mobile-l {
-    max-width: calc($mobile-l-grid * 20);
-    margin: $mobile-l-grid auto;
-    padding: 0 $mobile-l-grid;
-  }
-
-  @include tablet {
-    max-width: calc($tablet-grid * 23);
-    margin: $tablet-grid auto;
-    padding: 0;
-    grid-template-columns: calc($tablet-grid * 9) auto;
-  }
-
-  @include laptop {
-    max-width: $laptop;
-    margin: $laptop-grid auto;
-    padding: 0 1.6rem;
-    grid-template-columns: calc($laptop-grid * 9) calc($laptop-grid * 18);
-  }
-
-  @include desktop {
-    max-width: $desktop;
-    padding: 0 2.9rem;
-    grid-template-columns: calc($laptop-grid * 9 - 1px) auto;
-  }
-}
-
 li {
   list-style: none;
 }
