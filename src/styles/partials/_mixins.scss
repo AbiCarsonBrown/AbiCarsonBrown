@@ -29,3 +29,22 @@
     @content;
   }
 }
+
+@mixin text-box {
+  display: grid;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: $primary-background;
+  border-top: solid $grid-line 1px;
+  border-left: solid $grid-line 1px;
+  padding-bottom: 0.25rem;
+
+  @include mobile-l {
+    border-right: solid $grid-line 1px;
+  }
+
+  @include tablet {
+    border-right: none;
+  }
+}

@@ -3,83 +3,37 @@
 
 .headline {
   display: grid;
-  grid-template-rows: repeat(5, 20px);
+  grid-template-rows: repeat(5, $mobile-s-grid);
 
   @include mobile-m {
-    grid-template-rows: repeat(5, 22px);
+    grid-template-rows: repeat(5, $mobile-m-grid);
   }
 
   @include mobile-l {
-    grid-template-rows: repeat(5, 25px);
+    grid-template-rows: repeat(5, $mobile-l-grid);
   }
 
   @include tablet {
-    grid-template-rows: repeat(5, 32px);
+    grid-template-rows: repeat(5, $tablet-grid);
   }
 
   @include laptop {
-    grid-template-rows: repeat(5, 36px);
+    grid-template-rows: repeat(5, $laptop-grid);
   }
 
   &__title,
   &__subtitle {
-    display: grid;
-    align-items: center;
-    background-color: $primary-background;
-    border-top: solid $grid-line 1px;
-    border-left: solid $grid-line 1px;
-    height: 100%;
-    width: 100%;
+    @include text-box;
     color: $accent;
-    text-align: center;
-
-    @include mobile-m {
-      border-right: solid $grid-line 1px;
-    }
-
-    @include tablet {
-      border-right: none;
-    }
   }
 
   &__title {
-    font-size: 1.85rem;
     grid-row-start: 1;
     grid-row-end: 3;
-
-    @include mobile-m {
-      padding-bottom: 0.25rem;
-    }
-
-    @include mobile-l {
-      font-size: 2rem;
-    }
-
-    @include tablet {
-      font-size: 2.25rem;
-    }
-
-    @include laptop {
-      font-size: 2.5rem;
-    }
   }
 
   &__subtitle {
-    font-size: 1.5rem;
-    padding-bottom: 0.25rem;
     grid-row-start: 3;
     grid-row-end: 5;
-
-    @include mobile-l {
-      font-size: 1.75rem;
-    }
-
-    @include tablet {
-      font-size: 2rem;
-    }
-
-    @include laptop {
-      font-size: 2.25rem;
-    }
   }
 }

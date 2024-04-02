@@ -13,61 +13,62 @@
 }
 
 body {
-  background-size: 20px 20px;
   background-image: linear-gradient(to right, $grid-line 1px, transparent 1px),
     linear-gradient(to bottom, $grid-line 1px, transparent 1px);
   background-position-x: center;
   background-color: $primary-background;
 
+  background-size: $mobile-s-grid $mobile-s-grid;
+
   @include mobile-m {
-    background-size: 22px 22px;
+    background-size: $mobile-m-grid $mobile-m-grid;
   }
 
   @include mobile-l {
-    background-size: 25px 25px;
+    background-size: $mobile-l-grid $mobile-l-grid;
   }
 
   @include tablet {
-    background-size: 32px 32px;
+    background-size: $tablet-grid $tablet-grid;
   }
 
   @include laptop {
-    background-size: 36px 36px;
+    background-size: $laptop-grid $laptop-grid;
   }
 }
 
 .app {
   display: grid;
-  max-width: 300px;
-  margin: 1.25rem auto;
+  max-width: calc($mobile-s-grid * 15);
+  margin: $mobile-s-grid auto;
 
   @include mobile-m {
-    max-width: 330px;
-    margin: 1.38rem auto;
+    max-width: calc($mobile-m-grid * 15);
+    margin: $mobile-m-grid auto;
   }
 
   @include mobile-l {
-    max-width: 500px;
-    margin: 1.55rem auto;
-    padding: 0 1.55rem;
+    max-width: calc($mobile-l-grid * 20);
+    margin: $mobile-l-grid auto;
+    padding: 0 $mobile-l-grid;
   }
 
   @include tablet {
-    max-width: 736px;
-    margin: 2rem auto;
+    max-width: calc($tablet-grid * 23);
+    margin: $tablet-grid auto;
     padding: 0;
-    grid-template-columns: 288px 448px;
+    grid-template-columns: calc($tablet-grid * 9) auto;
   }
 
   @include laptop {
-    max-width: 1024px;
-    margin: 2.25rem auto;
+    max-width: $laptop;
+    margin: $laptop-grid auto;
     padding: 0 1.6rem;
-    grid-template-columns: 324px auto;
+    grid-template-columns: calc($laptop-grid * 9) auto;
   }
 
   @include desktop {
-    max-width: 1280px;
+    max-width: $desktop;
     padding: 0 2.9rem;
   }
 }
@@ -78,4 +79,76 @@ li {
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.85rem;
+
+  @include mobile-l {
+    font-size: 2rem;
+  }
+
+  @include tablet {
+    font-size: 2.25rem;
+  }
+
+  @include laptop {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+
+  @include mobile-l {
+    font-size: 1.75rem;
+  }
+
+  @include tablet {
+    font-size: 2rem;
+  }
+
+  @include laptop {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+
+  @include mobile-l {
+    font-size: 1.5rem;
+  }
+
+  @include tablet {
+    font-size: 1.6rem;
+    grid-column-end: 7;
+  }
+
+  @include laptop {
+    font-size: 1.75rem;
+  }
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.25;
+
+  @include mobile-l {
+    font-size: 1rem;
+  }
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
+  @include laptop {
+    font-size: 1.4rem;
+  }
 }

@@ -25,49 +25,49 @@
   &__wrapper {
     display: grid;
     padding-right: 100%;
-    grid-template-columns: repeat(22, 60px);
+    grid-template-columns: repeat(22, calc($mobile-s-grid * 3));
     animation: 8s linear infinite slidein;
 
     @include mobile-m {
-      grid-template-columns: repeat(22, 66px);
+      grid-template-columns: repeat(22, calc($mobile-m-grid * 3));
     }
 
     @include mobile-l {
-      grid-template-columns: repeat(22, 75px);
+      grid-template-columns: repeat(22, calc($mobile-l-grid * 3));
     }
 
     @include tablet {
-      grid-template-columns: repeat(24, 64px);
+      grid-template-columns: repeat(24, calc($tablet-grid * 2));
     }
 
     @include laptop {
-      grid-template-columns: repeat(26, 72px);
+      grid-template-columns: repeat(26, calc($laptop-grid * 2));
     }
 
     @include desktop {
-      grid-template-columns: repeat(29, 72px);
+      grid-template-columns: repeat(29, calc($laptop-grid * 2));
     }
   }
 
   &__item {
     margin: 0.25rem;
     aspect-ratio: 1/1;
-    height: 52px;
+    height: calc($mobile-s-grid * 3 - 0.5rem);
 
     @include mobile-m {
-      height: 58px;
+      height: calc($mobile-m-grid * 3 - 0.5rem);
     }
 
     @include mobile-l {
-      height: 67px;
+      height: calc($mobile-l-grid * 3 - 0.5rem);
     }
 
     @include tablet {
-      height: 56px;
+      height: calc($tablet-grid * 2 - 0.5rem);
     }
 
     @include laptop {
-      height: 64px;
+      height: calc($laptop-grid * 2 - 0.5rem);
     }
   }
 }
