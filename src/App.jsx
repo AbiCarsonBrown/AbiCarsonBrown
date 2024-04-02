@@ -17,8 +17,8 @@ function App() {
       {/* <NavBar titles={titles} /> */}
       <HeadLine />
       <About />
-      {/* <Projects />
-      <Contact /> */}
+      <Projects />
+      {/* <Contact /> */}
     </main>
   );
 }

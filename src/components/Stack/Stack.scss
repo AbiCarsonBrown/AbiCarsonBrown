@@ -41,14 +41,5 @@
 
   &__title {
     @include text-box;
-    text-align: center;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 8;
-
-    @include tablet {
-      grid-column-end: 7;
-    }
   }
 }

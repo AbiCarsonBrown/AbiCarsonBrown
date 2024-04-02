@@ -1,0 +1,18 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.projects {
+  display: grid;
+  grid-template-rows: repeat(3, $mobile-s-grid);
+  grid-template-columns: repeat(15, $mobile-s-grid);
+
+  &__title {
+    @include text-box;
+  }
+
+  &__list {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-column-end: 16;
+  }
+}
