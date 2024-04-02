@@ -1,5 +1,5 @@
 import "./Projects.scss";
-import Project from "../Project/Project";
+import Project from "../../components/Project/Project";
 
 export default function Projects() {
   const projects = [
@@ -22,13 +22,13 @@ export default function Projects() {
   ];
 
   return (
-    <section className="projects">
+    <main className="projects">
       <h3 className="projects__title">Projects</h3>
       <ul className="projects__list">
         {projects.map((project, index) => (
           <Project key={index} project={project} />
         ))}
       </ul>
-    </section>
+    </main>
   );
 }

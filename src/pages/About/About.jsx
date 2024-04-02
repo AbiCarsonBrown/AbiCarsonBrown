@@ -1,9 +1,9 @@
 import "./About.scss";
-import Stack from "../Stack/Stack";
+import Stack from "../../components/Stack/Stack";
 
 export default function About() {
   return (
-    <section className="about" id="about">
+    <main className="about" id="about">
       <p className="about__content">
         Hi, I'm Abi, a Software Engineer with a unique journey. My background
         includes studying Mathematics at university and a rewarding 5-year
@@ -21,6 +21,6 @@ export default function About() {
         innovative software solutions.
       </p>
       <Stack />
-    </section>
+    </main>
   );
 }

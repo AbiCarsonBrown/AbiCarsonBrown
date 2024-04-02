@@ -13,17 +13,20 @@
 
   @include mobile-l {
     grid-template-rows: repeat(3, $mobile-l-grid);
-    grid-template-columns: repeat(18, $mobile-l-grid);
+    grid-template-columns: repeat(15, $mobile-l-grid);
   }
 
   @include tablet {
     grid-template-rows: repeat(3, $tablet-grid);
-    grid-template-columns: repeat(18, $tablet-grid);
+    grid-template-columns: repeat(13, $tablet-grid);
+    grid-column-start: 2;
+    padding-left: $tablet-grid;
   }
 
   @include laptop {
     grid-template-rows: repeat(3, $laptop-grid);
-    grid-template-columns: repeat(18, $laptop-grid);
+    grid-template-columns: repeat(17, $laptop-grid);
+    padding-left: $laptop-grid;
   }
 
   @include desktop {
@@ -38,5 +41,17 @@
     grid-row-start: 4;
     grid-column-start: 1;
     grid-column-end: 16;
+
+    @include tablet {
+      grid-column-end: 14;
+    }
+
+    @include laptop {
+      grid-column-end: 18;
+    }
+
+    @include desktop {
+      grid-column-end: 24;
+    }
   }
 }
