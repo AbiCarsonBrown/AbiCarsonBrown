@@ -3,7 +3,7 @@ import Stack from "../../components/Stack/Stack";
 
 export default function About() {
   return (
-    <main className="about" id="about">
+    <main className="about">
       <p className="about__content">
         Hi, I'm Abi, a Software Engineer with a unique journey. My background
         includes studying Mathematics at university and a rewarding 5-year
