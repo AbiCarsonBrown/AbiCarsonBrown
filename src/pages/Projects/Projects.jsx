@@ -15,8 +15,8 @@ export default function Projects() {
     {
       name: "CoffeeBeen",
       url: "https://coffeebeen.abicarsonbrown.com",
-      github_client: "",
-      github_server: "",
+      github_client: "https://github.com/AbiCarsonBrown/CoffeeBeen",
+      github_server: "https://github.com/AbiCarsonBrown/CoffeeBeen-server",
       description:
         "Bringing together front-end and back-end development skills to create a web application to find and review coffee shops around London, illustrated using the GoogleMaps API.",
       images: [
@@ -66,9 +66,8 @@ export default function Projects() {
 
   return (
     <main className="projects">
-      <section className="projects__container">
-        <Project project={projects[activeProjectIndex]} />
-      </section>
+      <Project project={projects[activeProjectIndex]} />
+
       <div className="projects__buttons">
         <button
           className="projects__button projects__button--prev"
@@ -83,6 +82,7 @@ export default function Projects() {
           return (
             <button
               key={index}
+              className="projects__button projects__button--index"
               onClick={() => {
                 changeProject(index);
               }}
@@ -91,6 +91,7 @@ export default function Projects() {
             </button>
           );
         })}
+
         <button
           className="projects__button projects__button--next"
           onClick={() => {
