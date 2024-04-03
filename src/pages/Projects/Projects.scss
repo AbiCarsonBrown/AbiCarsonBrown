@@ -3,6 +3,7 @@
 
 .projects {
   display: grid;
+  justify-items: center;
   grid-template-rows: repeat(24, $mobile-s-grid);
   grid-template-columns: repeat(15, $mobile-s-grid);
   margin-bottom: $mobile-s-grid;
@@ -24,23 +25,5 @@
     grid-template-columns: repeat(13, $tablet-grid);
     margin-bottom: $tablet-grid;
     margin-left: $tablet-grid;
-  }
-
-  &__buttons {
-    justify-self: center;
-    grid-column-start: 1;
-    grid-column-end: 16;
-    grid-row-start: 24;
-    grid-row-end: 25;
-
-    @include mobile-l {
-      grid-column-end: 17;
-    }
-
-    @include tablet {
-      grid-row-start: 20;
-      grid-row-end: 22;
-      padding: 1.4rem 0;
-    }
   }
 }

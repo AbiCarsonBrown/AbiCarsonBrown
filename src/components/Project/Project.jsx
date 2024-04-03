@@ -60,7 +60,6 @@ export default function Project({ project }) {
         />
 
         <GalleryButtons
-          className="project__buttons"
           galleryArray={project.images}
           activeIndex={activeImageIndex}
           setActiveIndex={setActiveImageIndex}

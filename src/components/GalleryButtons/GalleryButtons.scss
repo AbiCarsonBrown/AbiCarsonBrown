@@ -2,6 +2,17 @@
 @use "../../styles/partials/mixins" as *;
 
 .buttons {
+  grid-column-start: 1;
+  grid-column-end: 16;
+
+  @include mobile-l {
+    grid-column-end: 17;
+  }
+
+  @include tablet {
+    padding: 1.4rem 0;
+  }
+
   &__index {
     background-color: $grid-line;
     height: 1rem;
