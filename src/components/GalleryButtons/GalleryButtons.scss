@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.buttons {
+  &__index {
+    background-color: $grid-line;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+
+    &--active {
+      background-color: $primary;
+    }
+  }
+
+  &__icon {
+    height: 1rem;
+  }
+}

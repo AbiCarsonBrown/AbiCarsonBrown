@@ -7,6 +7,7 @@ import homeDeskCB from "../../assets/coffeebeen/home-desktop.png";
 import homeMobCB from "../../assets/coffeebeen/home-mobile-list.png";
 import loginMobCB from "../../assets/coffeebeen/login-mobile.png";
 import profileTabCB from "../../assets/coffeebeen/profile-tablet.png";
+import GalleryButtons from "../../components/GalleryButtons/GalleryButtons";
 
 export default function Projects() {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
@@ -46,61 +47,15 @@ export default function Projects() {
     },
   ];
 
-  const changeProject = (action) => {
-    if (action === "prev") {
-      if (activeProjectIndex === 0) {
-        setActiveProjectIndex(projects.length - 1);
-      } else {
-        setActiveProjectIndex(activeProjectIndex - 1);
-      }
-    } else if (action === "next") {
-      if (activeProjectIndex === projects.length - 1) {
-        setActiveProjectIndex(0);
-      } else {
-        setActiveProjectIndex(activeProjectIndex + 1);
-      }
-    } else {
-      setActiveProjectIndex(action);
-    }
-  };
-
   return (
     <main className="projects">
       <Project project={projects[activeProjectIndex]} />
-
-      <div className="projects__buttons">
-        <button
-          className="projects__button projects__button--prev"
-          onClick={() => {
-            changeProject("prev");
-          }}
-        >
-          Prev
-        </button>
-
-        {projects.map((_project, index) => {
-          return (
-            <button
-              key={index}
-              className="projects__button projects__button--index"
-              onClick={() => {
-                changeProject(index);
-              }}
-            >
-              {index}
-            </button>
-          );
-        })}
-
-        <button
-          className="projects__button projects__button--next"
-          onClick={() => {
-            changeProject("next");
-          }}
-        >
-          Next
-        </button>
-      </div>
+      <GalleryButtons
+        className="projects__buttons"
+        galleryArray={projects}
+        activeIndex={activeProjectIndex}
+        setActiveIndex={setActiveProjectIndex}
+      />
     </main>
   );
 }
