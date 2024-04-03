@@ -1,7 +1,10 @@
 import "./Projects.scss";
 import Project from "../../components/Project/Project";
+import { useState } from "react";
 
 export default function Projects() {
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+
   const projects = [
     {
       name: "CoffeeBeen",
@@ -23,11 +26,9 @@ export default function Projects() {
 
   return (
     <main className="projects">
-      <ul className="projects__list">
-        {projects.map((project, index) => (
-          <Project key={index} project={project} />
-        ))}
-      </ul>
+      <div className="projects__container">
+        <Project project={projects[activeProjectIndex]} />
+      </div>
     </main>
   );
 }

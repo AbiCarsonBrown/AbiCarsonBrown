@@ -3,7 +3,7 @@
 
 .projects {
   display: grid;
-  grid-template-rows: repeat(3, $mobile-s-grid);
+  grid-template-rows: repeat(25, $mobile-s-grid);
   grid-template-columns: repeat(15, $mobile-s-grid);
 
   @include mobile-m {
@@ -33,10 +33,12 @@
     grid-template-columns: repeat(23, $laptop-grid);
   }
 
-  &__list {
+  &__container {
     grid-row-start: 1;
+    grid-row-end: 25;
     grid-column-start: 1;
     grid-column-end: 16;
+    overflow: hidden;
 
     @include tablet {
       grid-column-end: 14;

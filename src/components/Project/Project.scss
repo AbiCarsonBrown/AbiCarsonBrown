@@ -2,10 +2,9 @@
 @use "../../styles/partials/mixins" as *;
 
 .project {
+  @include text-box;
   display: grid;
-  width: 100%;
   margin-bottom: $mobile-s-grid;
-  height: calc($mobile-s-grid * 6);
   grid-template-rows: repeat(12, calc($mobile-s-grid / 2));
 
   @include mobile-m {
@@ -38,13 +37,11 @@
   }
 
   &__link {
-    @include text-box;
     grid-row-start: 1;
     grid-row-end: 4;
   }
 
   &__description {
-    @include text-box;
     border-top: none;
     grid-row-start: 4;
     grid-row-end: 13;
