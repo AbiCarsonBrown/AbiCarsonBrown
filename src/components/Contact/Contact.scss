@@ -16,6 +16,11 @@
     grid-template-columns: repeat(30, calc($mobile-l-grid / 2));
   }
 
+  @include tablet {
+    grid-template-rows: repeat(10, $tablet-grid);
+    grid-template-columns: repeat(18, calc($tablet-grid / 2));
+  }
+
   &__title {
     @include text-box;
     padding-left: 0.25rem;
@@ -33,14 +38,34 @@
 
     &--email {
       grid-column-start: 5;
+
+      @include tablet {
+        grid-row-start: 2;
+        grid-row-end: 5;
+      }
     }
 
     &--in {
       grid-column-start: 14;
+
+      @include tablet {
+        grid-row-start: 5;
+        grid-row-end: 8;
+      }
     }
 
     &--git {
       grid-column-start: 23;
+
+      @include tablet {
+        grid-row-start: 8;
+        grid-row-end: 11;
+      }
+    }
+
+    @include tablet {
+      grid-column-start: 8;
+      grid-column-end: 11;
     }
   }
 

@@ -22,6 +22,7 @@
     margin: $tablet-grid auto;
     padding: 0;
     grid-template-columns: calc($tablet-grid * 9) auto;
+    grid-template-rows: calc($tablet-grid * 11) calc($tablet-grid * 10);
   }
 
   @include laptop {
