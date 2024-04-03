@@ -38,7 +38,6 @@
     grid-row-end: 25;
     grid-column-start: 1;
     grid-column-end: 16;
-    overflow: hidden;
 
     @include tablet {
       grid-column-end: 14;

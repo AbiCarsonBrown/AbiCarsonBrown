@@ -1,6 +1,12 @@
 import "./Projects.scss";
 import Project from "../../components/Project/Project";
 import { useState } from "react";
+import shopDeskCB from "../../assets/coffeebeen/coffeeshop-desktop.png";
+import shopMobCB from "../../assets/coffeebeen/coffeeshop-mobile.png";
+import homeDeskCB from "../../assets/coffeebeen/home-desktop.png";
+import homeMobCB from "../../assets/coffeebeen/home-mobile-list.png";
+import loginMobCB from "../../assets/coffeebeen/login-mobile.png";
+import profileTabCB from "../../assets/coffeebeen/profile-tablet.png";
 
 export default function Projects() {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
@@ -9,18 +15,34 @@ export default function Projects() {
     {
       name: "CoffeeBeen",
       url: "https://coffeebeen.abicarsonbrown.com",
+      github_client: "",
+      github_server: "",
       description:
         "Bringing together front-end and back-end development skills to create a web application to find and review coffee shops around London, illustrated using the GoogleMaps API.",
+      images: [
+        shopDeskCB,
+        shopMobCB,
+        homeDeskCB,
+        homeMobCB,
+        loginMobCB,
+        profileTabCB,
+      ],
     },
     {
       name: "PlanPal",
-      url: "https://github.com/AbiCarsonBrown/hackathon-planpal",
+      url: "",
+      github_client: "https://github.com/AbiCarsonBrown/hackathon-planpal",
+      github_server: "",
       description: "Hackathon",
+      images: [],
     },
     {
       name: "whY",
-      url: "https://github.com/AbiCarsonBrown/whY-client",
+      url: "",
+      github_client: "https://github.com/AbiCarsonBrown/whY-client",
+      github_server: "",
       description: "Hackathon",
+      images: [],
     },
   ];
 
@@ -44,8 +66,10 @@ export default function Projects() {
 
   return (
     <main className="projects">
-      <div className="projects__container">
+      <section className="projects__container">
         <Project project={projects[activeProjectIndex]} />
+      </section>
+      <div className="projects__buttons">
         <button
           className="projects__button projects__button--prev"
           onClick={() => {
@@ -58,6 +82,7 @@ export default function Projects() {
         {projects.map((_project, index) => {
           return (
             <button
+              key={index}
               onClick={() => {
                 changeProject(index);
               }}
