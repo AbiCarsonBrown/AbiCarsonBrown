@@ -30,6 +30,7 @@
     margin: $laptop-grid auto;
     padding: 0 1.6rem;
     grid-template-columns: calc($laptop-grid * 9) calc($laptop-grid * 18);
+    grid-template-rows: calc($laptop-grid * 11) calc($laptop-grid * 10);
   }
 
   @include desktop {

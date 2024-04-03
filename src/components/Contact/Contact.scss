@@ -21,6 +21,11 @@
     grid-template-columns: repeat(18, calc($tablet-grid / 2));
   }
 
+  @include laptop {
+    grid-template-rows: repeat(10, $laptop-grid);
+    grid-template-columns: repeat(18, calc($laptop-grid / 2));
+  }
+
   &__title {
     @include text-box;
     padding-left: 0.25rem;
