@@ -5,12 +5,23 @@
   @include text-box;
   grid-template-rows: repeat(21, $mobile-s-grid);
   grid-template-columns: repeat(14, $mobile-s-grid);
-
   grid-column-start: 1;
   grid-column-end: 16;
   grid-row-start: 1;
-  grid-row-end: 22;
+  grid-row-end: 23;
   padding: 0 0.55rem;
+
+  @include mobile-m {
+    grid-template-rows: repeat(21, $mobile-m-grid);
+    grid-template-columns: repeat(14, $mobile-m-grid);
+  }
+
+  @include mobile-l {
+    grid-template-rows: repeat(21, $mobile-l-grid);
+    grid-template-columns: repeat(14, $mobile-l-grid);
+    grid-column-end: 17;
+    padding: 0 0.75rem;
+  }
 
   &__title,
   &__description,
@@ -18,12 +29,20 @@
   &__gallery {
     grid-column-start: 1;
     grid-column-end: 15;
+
+    @include mobile-l {
+      grid-column-end: 16;
+    }
   }
 
   &__title,
   &__description {
     @include text-box;
     border: none;
+
+    @include mobile-l {
+      border-right: none;
+    }
   }
 
   &__description {
@@ -37,6 +56,17 @@
     grid-row-end: 11;
     grid-template-rows: repeat(3, $mobile-s-grid);
     grid-template-columns: repeat(14, $mobile-s-grid);
+
+    @include mobile-m {
+      grid-template-rows: repeat(3, $mobile-m-grid);
+      grid-template-columns: repeat(14, $mobile-m-grid);
+    }
+
+    @include mobile-l {
+      grid-template-rows: repeat(3, $mobile-l-grid);
+      grid-template-columns: repeat(14, $mobile-l-grid);
+      grid-column-end: 15;
+    }
   }
 
   &__link {
@@ -85,17 +115,30 @@
 
   &__gallery {
     display: grid;
-    justify-content: center;
-    grid-row-start: 11;
-    grid-row-end: 21;
+    grid-template-rows: repeat(11, $mobile-s-grid);
+    align-items: center;
+    justify-items: center;
+    grid-row-start: 12;
+    grid-row-end: 23;
+
+    @include mobile-m {
+      grid-template-rows: repeat(11, $mobile-m-grid);
+    }
+
+    @include mobile-l {
+      grid-template-rows: repeat(11, $mobile-l-grid);
+    }
   }
 
   &__img {
-    height: calc($mobile-s-grid * 7);
+    max-width: 100%;
+    max-height: 100%;
+    grid-row-start: 1;
+    grid-row-end: 10;
   }
 
   &__buttons {
-    // display: grid;
-    // grid-column: 1;
+    grid-row-start: 10;
+    grid-row-end: 12;
   }
 }

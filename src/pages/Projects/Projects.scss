@@ -7,10 +7,27 @@
   grid-template-columns: repeat(15, $mobile-s-grid);
   margin-bottom: $mobile-s-grid;
 
+  @include mobile-m {
+    grid-template-rows: repeat(24, $mobile-m-grid);
+    grid-template-columns: repeat(15, $mobile-m-grid);
+    margin-bottom: $mobile-m-grid;
+  }
+
+  @include mobile-l {
+    grid-template-rows: repeat(24, $mobile-l-grid);
+    grid-template-columns: repeat(15, $mobile-l-grid);
+    margin-bottom: $mobile-l-grid;
+  }
+
   &__buttons {
-    grid-column-start: 2;
-    grid-column-end: 15;
-    grid-row-start: 23;
-    grid-row-end: 24;
+    justify-self: center;
+    grid-column-start: 1;
+    grid-column-end: 16;
+    grid-row-start: 24;
+    grid-row-end: 25;
+
+    @include mobile-l {
+      grid-column-end: 17;
+    }
   }
 }

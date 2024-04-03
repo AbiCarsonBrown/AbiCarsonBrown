@@ -26,7 +26,7 @@ export default function Project({ project }) {
   };
 
   return (
-    <article className={`project project--${project.name.toLowerCase()}`}>
+    <article className="project">
       <h3 className="project__title">{project.name}</h3>
       <p className="project__description">{project.description}</p>
       <div className="project__links">
