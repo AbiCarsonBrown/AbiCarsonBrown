@@ -24,10 +24,56 @@ export default function Projects() {
     },
   ];
 
+  const changeProject = (action) => {
+    if (action === "prev") {
+      if (activeProjectIndex === 0) {
+        setActiveProjectIndex(projects.length - 1);
+      } else {
+        setActiveProjectIndex(activeProjectIndex - 1);
+      }
+    } else if (action === "next") {
+      if (activeProjectIndex === projects.length - 1) {
+        setActiveProjectIndex(0);
+      } else {
+        setActiveProjectIndex(activeProjectIndex + 1);
+      }
+    } else {
+      setActiveProjectIndex(action);
+    }
+  };
+
   return (
     <main className="projects">
       <div className="projects__container">
         <Project project={projects[activeProjectIndex]} />
+        <button
+          className="projects__button projects__button--prev"
+          onClick={() => {
+            changeProject("prev");
+          }}
+        >
+          Prev
+        </button>
+
+        {projects.map((_project, index) => {
+          return (
+            <button
+              onClick={() => {
+                changeProject(index);
+              }}
+            >
+              {index}
+            </button>
+          );
+        })}
+        <button
+          className="projects__button projects__button--next"
+          onClick={() => {
+            changeProject("next");
+          }}
+        >
+          Next
+        </button>
       </div>
     </main>
   );

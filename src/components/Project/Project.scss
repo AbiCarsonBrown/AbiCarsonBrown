@@ -3,6 +3,7 @@
 
 .project {
   @include text-box;
+  height: 92%;
   display: grid;
   margin-bottom: $mobile-s-grid;
   grid-template-rows: repeat(12, calc($mobile-s-grid / 2));
