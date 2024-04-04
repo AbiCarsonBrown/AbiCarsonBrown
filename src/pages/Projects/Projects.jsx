@@ -8,6 +8,10 @@ import homeMobCB from "../../assets/coffeebeen/home-mobile-list.png";
 import loginMobCB from "../../assets/coffeebeen/login-mobile.png";
 import profileTabCB from "../../assets/coffeebeen/profile-tablet.png";
 import GalleryButtons from "../../components/GalleryButtons/GalleryButtons";
+import homePP from "../../assets/planpal/homepage.png";
+import formPP from "../../assets/planpal/form-complete.png";
+import loadingPP from "../../assets/planpal/loading.png";
+import resultPP from "../../assets/planpal/result.png";
 
 export default function Projects() {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
@@ -32,10 +36,10 @@ export default function Projects() {
     {
       name: "PlanPal",
       url: "",
-      github_client: "https://github.com/AbiCarsonBrown/hackathon-planpal",
+      github_client: "https://github.com/AbiCarsonBrown/PlanPal",
       github_server: "",
       description: "Hackathon",
-      images: [],
+      images: [homePP, formPP, loadingPP, resultPP],
     },
     {
       name: "whY",
