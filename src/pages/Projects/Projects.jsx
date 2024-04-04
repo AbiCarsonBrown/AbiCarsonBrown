@@ -12,6 +12,11 @@ import homePP from "../../assets/planpal/homepage.png";
 import formPP from "../../assets/planpal/form-complete.png";
 import loadingPP from "../../assets/planpal/loading.png";
 import resultPP from "../../assets/planpal/result.png";
+import addWhy from "../../assets/why/add-post.jpeg";
+import formValidWhy from "../../assets/why/form-validation.jpeg";
+import homeWhy from "../../assets/why/home.jpeg";
+import newWhy from "../../assets/why/new-post.jpeg";
+import signUpWhy from "../../assets/why/sign-up.jpeg";
 
 export default function Projects() {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
@@ -44,10 +49,10 @@ export default function Projects() {
     {
       name: "whY",
       url: "",
-      github_client: "https://github.com/AbiCarsonBrown/whY-client",
+      github_client: "https://github.com/AbiCarsonBrown/whY",
       github_server: "",
       description: "Hackathon",
-      images: [],
+      images: [homeWhy, newWhy, addWhy, signUpWhy, formValidWhy],
     },
   ];
 
