@@ -1,8 +1,9 @@
-# React + Vite
+<h1> Hi there! I'm Abi ✨ </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p> I'm a Full Stack Developer who loves to create software solutions that bring joy and excitement, or simply make people's lives easier!<br/>
+ My non-coding passions include coffee, Disney and Taylor Swift! <br/>
+  <br />
+ ⚙️ Working with JavaScript, React, Node & MySQL <br/>
+🌱 Learning TypeScript, C# & .NET <br/>
+📫 Reach me out to me on <a href="https://www.linkedin.com/in/abi-carson-brown" target=”_blank”>LinkedIn</a> and check out my <a href="https://abicarsonbrown.com" target=”_blank”>portfolio</a>!
+</p>
