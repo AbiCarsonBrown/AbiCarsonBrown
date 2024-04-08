@@ -15,12 +15,17 @@
 
   @include tablet {
     grid-template-rows: repeat(21, $tablet-grid);
-    padding-left: $tablet-grid;
+    margin-left: $tablet-grid;
   }
 
   @include laptop {
     grid-template-rows: repeat(20, $laptop-grid);
-    padding-left: $laptop-grid;
+    margin-left: $laptop-grid;
+  }
+
+  @include desktop {
+    grid-template-rows: repeat(24, $laptop-grid);
+    margin-left: calc($laptop-grid * 4);
   }
 
   &__content {
@@ -39,10 +44,6 @@
 
     @include laptop {
       grid-row-end: 12;
-    }
-
-    @include desktop {
-      grid-row-end: 10;
     }
   }
 }

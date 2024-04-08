@@ -34,9 +34,9 @@
   }
 
   @include desktop {
-    grid-template-columns: repeat(23, $laptop-grid);
-    grid-row-start: 11;
-    grid-row-end: 17;
+    grid-template-columns: repeat(20, $laptop-grid);
+    grid-row-start: 14;
+    grid-row-end: 20;
   }
 
   &__title {
