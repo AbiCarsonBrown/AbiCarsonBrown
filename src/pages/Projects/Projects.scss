@@ -23,6 +23,12 @@
     margin-left: $tablet-grid;
   }
 
+  @include laptop {
+    grid-template-rows: repeat(20, $laptop-grid);
+    grid-template-columns: repeat(17, $laptop-grid);
+    margin-left: $laptop-grid;
+  }
+
   &__buttons {
     display: grid;
     grid-row: 24;
@@ -41,6 +47,9 @@
 
     @include tablet {
       grid-row: 20;
+    }
+    @include laptop {
+      grid-column-end: 18;
     }
   }
 }

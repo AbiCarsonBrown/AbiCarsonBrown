@@ -4,7 +4,7 @@
 .project {
   @include text-box;
   grid-template-rows: repeat(44, calc($mobile-s-grid/2));
-  grid-template-columns: repeat(14, $mobile-s-grid);
+  grid-template-columns: repeat(14, auto);
   grid-column-start: 1;
   grid-column-end: 16;
   grid-row-start: 1;
@@ -14,13 +14,11 @@
 
   @include mobile-m {
     grid-template-rows: repeat(42, calc($mobile-m-grid / 2));
-    grid-template-columns: repeat(14, $mobile-m-grid);
     grid-row-end: 22;
   }
 
   @include mobile-l {
     grid-template-rows: repeat(38, calc($mobile-l-grid / 2));
-    grid-template-columns: repeat(14, $mobile-l-grid);
     grid-column-end: 17;
     grid-row-end: 20;
     padding: 0 0.75rem;
@@ -30,6 +28,11 @@
     grid-template-rows: repeat(36, calc($tablet-grid / 2));
     grid-template-columns: repeat(12, auto);
     grid-row-end: 19;
+  }
+
+  @include laptop {
+    grid-template-rows: repeat(36, calc($laptop-grid / 2));
+    grid-column-end: 18;
   }
 
   &__title,
@@ -102,6 +105,10 @@
       grid-template-rows: repeat(5, calc($tablet-grid / 2));
       grid-template-columns: repeat(12, $tablet-grid);
     }
+
+    @include laptop {
+      grid-template-rows: repeat(5, calc($laptop-grid / 2));
+    }
   }
 
   &__link {
@@ -159,7 +166,7 @@
     }
 
     @include laptop {
-      height: calc($laptop-grid * 2 - 0.5rem);
+      height: calc($laptop-grid * 3 / 2 - 0.5rem);
     }
   }
 
@@ -188,6 +195,10 @@
       grid-row-start: 16;
       grid-row-end: 37;
       grid-template-rows: repeat(18, calc($tablet-grid / 2));
+    }
+
+    @include laptop {
+      grid-template-rows: repeat(20, calc($laptop-grid / 2));
     }
   }
 
@@ -221,6 +232,10 @@
 
     @include mobile-l {
       grid-row: 23;
+    }
+
+    @include laptop {
+      grid-row: 19;
     }
   }
 }
