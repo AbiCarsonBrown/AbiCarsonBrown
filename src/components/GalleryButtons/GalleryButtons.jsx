@@ -6,9 +6,12 @@ export default function GalleryButtons({
   galleryArray,
   activeIndex,
   setActiveIndex,
+  setSecondaryIndex,
 }) {
   const count = galleryArray.length;
+
   const moveGallery = (action) => {
+    setSecondaryIndex && setSecondaryIndex(0);
     if (action === "prev") {
       if (activeIndex === 0) {
         setActiveIndex(count - 1);

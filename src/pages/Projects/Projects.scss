@@ -30,7 +30,12 @@
     grid-column-end: 16;
     align-items: center;
 
+    @include mobile-m {
+      grid-row: 23;
+    }
+
     @include mobile-l {
+      grid-row: 21;
       grid-column-end: 17;
     }
 

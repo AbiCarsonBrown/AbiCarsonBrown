@@ -20,6 +20,7 @@ import signUpWhy from "../../assets/why/sign-up.jpeg";
 
 export default function Projects() {
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const projects = [
     {
@@ -60,12 +61,17 @@ export default function Projects() {
 
   return (
     <main className="projects">
-      <Project project={projects[activeProjectIndex]} />
+      <Project
+        project={projects[activeProjectIndex]}
+        activeImageIndex={activeImageIndex}
+        setActiveImageIndex={setActiveImageIndex}
+      />
       <div className="projects__buttons">
         <GalleryButtons
           galleryArray={projects}
           activeIndex={activeProjectIndex}
           setActiveIndex={setActiveProjectIndex}
+          setSecondaryIndex={setActiveImageIndex}
         />
       </div>
     </main>

@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Project.scss";
-import { useState } from "react";
 import Web from "../../assets/icons/Web.svg";
 import GitHub from "../../assets/icons/GitHub-footer.svg";
 import GalleryButtons from "../GalleryButtons/GalleryButtons";
 
-export default function Project({ project }) {
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
-
+export default function Project({
+  project,
+  activeImageIndex,
+  setActiveImageIndex,
+}) {
   return (
     <article className="project">
       <h3 className="project__title">{project.name}</h3>
