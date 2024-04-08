@@ -27,9 +27,9 @@
   }
 
   @include tablet {
-    grid-template-rows: repeat(19, $tablet-grid);
-    grid-template-columns: repeat(12, $tablet-grid);
-    grid-row-end: 20;
+    grid-template-rows: repeat(36, calc($tablet-grid / 2));
+    grid-template-columns: repeat(12, auto);
+    grid-row-end: 19;
   }
 
   &__title,
@@ -70,6 +70,10 @@
     @include mobile-m {
       grid-row-end: 12;
     }
+
+    @include tablet {
+      grid-row-end: 11;
+    }
   }
 
   &__links {
@@ -93,7 +97,9 @@
     }
 
     @include tablet {
-      grid-template-rows: repeat(3, $tablet-grid);
+      grid-row-start: 11;
+      grid-row-end: 16;
+      grid-template-rows: repeat(5, calc($tablet-grid / 2));
       grid-template-columns: repeat(12, $tablet-grid);
     }
   }
@@ -128,6 +134,11 @@
         grid-column-end: 12;
       }
     }
+
+    @include tablet {
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
   }
 
   &__link-icon {
@@ -144,7 +155,7 @@
     }
 
     @include tablet {
-      height: calc($tablet-grid * 2 - 0.5rem);
+      height: calc($tablet-grid * 3 / 2 - 0.5rem);
     }
 
     @include laptop {
@@ -174,7 +185,9 @@
     }
 
     @include tablet {
-      grid-row-end: 20;
+      grid-row-start: 16;
+      grid-row-end: 37;
+      grid-template-rows: repeat(18, calc($tablet-grid / 2));
     }
   }
 
@@ -191,6 +204,11 @@
 
     @include mobile-l {
       grid-row-end: 22;
+    }
+
+    @include tablet {
+      grid-row-start: 1;
+      grid-row-end: 18;
     }
   }
 

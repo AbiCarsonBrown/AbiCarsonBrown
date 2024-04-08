@@ -40,7 +40,7 @@
     }
 
     @include tablet {
-      padding: 1.4rem 0;
+      grid-row: 20;
     }
   }
 }
