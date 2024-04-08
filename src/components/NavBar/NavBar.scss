@@ -20,11 +20,21 @@
   &__link {
     @include text-box;
     text-align: center;
+    font-size: 1.25rem;
+
+    @include mobile-l {
+      font-size: 1.5rem;
+    }
 
     @include tablet {
+      font-size: 1.6rem;
       grid-column-start: 1;
       grid-column-end: 3;
       margin-bottom: $tablet-grid;
+    }
+
+    @include laptop {
+      font-size: 1.75rem;
     }
 
     &--about {
@@ -43,8 +53,4 @@
       }
     }
   }
-}
-
-.active {
-  color: red;
 }
