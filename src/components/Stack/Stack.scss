@@ -29,8 +29,8 @@
   @include laptop {
     grid-template-rows: repeat(6, $laptop-grid);
     grid-template-columns: repeat(18, $laptop-grid);
-    grid-row-start: 13;
-    grid-row-end: 19;
+    grid-row-start: 14;
+    grid-row-end: 20;
   }
 
   @include desktop {

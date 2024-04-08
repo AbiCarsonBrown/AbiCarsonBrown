@@ -50,6 +50,10 @@
       height: calc($tablet-grid * 3);
     }
 
+    @include laptop {
+      height: calc($laptop-grid * 3);
+    }
+
     &--email {
       grid-column-start: 4;
 
@@ -116,6 +120,10 @@
 
       @include tablet {
         width: calc($tablet-grid * 3 / 2);
+      }
+
+      @include laptop {
+        width: calc($laptop-grid * 3 / 2);
       }
     }
   }

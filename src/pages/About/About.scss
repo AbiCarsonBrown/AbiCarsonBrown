@@ -19,12 +19,8 @@
   }
 
   @include laptop {
-    grid-template-rows: repeat(18, $laptop-grid);
+    grid-template-rows: repeat(20, $laptop-grid);
     padding-left: $laptop-grid;
-  }
-
-  @include laptop {
-    grid-template-rows: repeat(16, $laptop-grid);
   }
 
   &__content {
