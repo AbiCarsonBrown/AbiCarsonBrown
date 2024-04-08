@@ -26,23 +26,15 @@
     grid-template-columns: repeat(18, calc($laptop-grid / 2));
   }
 
-  &__title {
-    @include text-box;
-    padding-left: 0.25rem;
-    grid-row: 1;
-    grid-column-start: 1;
-    grid-column-end: 10;
-  }
-
   &__link {
     display: grid;
     justify-items: center;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    width: 100%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: calc($mobile-s-grid * 3);
 
     &--email {
-      grid-column-start: 5;
+      grid-column-start: 4;
 
       @include tablet {
         grid-row-start: 2;
@@ -51,7 +43,7 @@
     }
 
     &--in {
-      grid-column-start: 14;
+      grid-column-start: 13;
 
       @include tablet {
         grid-row-start: 5;
@@ -60,7 +52,7 @@
     }
 
     &--git {
-      grid-column-start: 23;
+      grid-column-start: 22;
 
       @include tablet {
         grid-row-start: 8;
@@ -76,7 +68,6 @@
 
   &__icon {
     margin: 0.25rem;
-    aspect-ratio: 1/1;
     height: calc($mobile-s-grid * 2 - 0.5rem);
 
     @include mobile-m {
@@ -93,6 +84,10 @@
 
     @include laptop {
       height: calc($laptop-grid * 2 - 0.5rem);
+    }
+
+    &--in {
+      width: calc($mobile-s-grid * 3 / 2);
     }
   }
 }
