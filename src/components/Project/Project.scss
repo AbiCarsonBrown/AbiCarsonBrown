@@ -3,13 +3,14 @@
 
 .project {
   @include text-box;
-  grid-template-rows: repeat(21, $mobile-s-grid);
+  grid-template-rows: repeat(44, calc($mobile-s-grid/2));
   grid-template-columns: repeat(14, $mobile-s-grid);
   grid-column-start: 1;
   grid-column-end: 16;
   grid-row-start: 1;
   grid-row-end: 23;
   padding: 0 0.55rem;
+  justify-content: center;
 
   @include mobile-m {
     grid-template-rows: repeat(21, $mobile-m-grid);
@@ -20,6 +21,8 @@
     grid-template-rows: repeat(21, $mobile-l-grid);
     grid-template-columns: repeat(14, $mobile-l-grid);
     grid-column-end: 17;
+    grid-row-end: 20;
+
     padding: 0 0.75rem;
   }
 
@@ -55,19 +58,26 @@
     }
   }
 
+  &__title {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
   &__description {
-    grid-row-start: 3;
-    grid-row-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 15;
   }
 
   &__links {
     display: grid;
-    grid-row-start: 8;
-    grid-row-end: 11;
+    grid-row-start: 15;
+    grid-row-end: 21;
     grid-template-rows: repeat(3, $mobile-s-grid);
     grid-template-columns: repeat(14, $mobile-s-grid);
 
     @include mobile-m {
+      grid-row-start: 7;
+
       grid-template-rows: repeat(3, $mobile-m-grid);
       grid-template-columns: repeat(14, $mobile-m-grid);
     }
@@ -140,18 +150,20 @@
 
   &__gallery {
     display: grid;
-    grid-template-rows: repeat(11, $mobile-s-grid);
-    align-items: center;
+    grid-template-rows: repeat(23, calc($mobile-s-grid / 2));
+    grid-template-columns: 100%;
     justify-items: center;
-    grid-row-start: 12;
-    grid-row-end: 23;
+    align-items: center;
+    grid-row-start: 22;
+    grid-row-end: 44;
 
     @include mobile-m {
-      grid-template-rows: repeat(11, $mobile-m-grid);
+      grid-template-rows: repeat(23, calc($mobile-m-grid / 2));
     }
 
     @include mobile-l {
-      grid-template-rows: repeat(11, $mobile-l-grid);
+      grid-row-start: 8;
+      grid-template-rows: repeat(22, calc($mobile-m-grid / 2));
     }
 
     @include tablet {
@@ -163,6 +175,14 @@
     max-width: 100%;
     max-height: 100%;
     grid-row-start: 1;
-    grid-row-end: 10;
+    grid-row-end: 21;
+  }
+
+  &__buttons {
+    grid-row-start: 22;
+
+    @include mobile-m {
+      grid-row: 21;
+    }
   }
 }

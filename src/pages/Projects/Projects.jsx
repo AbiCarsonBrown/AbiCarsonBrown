@@ -25,15 +25,15 @@ export default function Projects() {
     {
       name: "CoffeeBeen",
       url: "https://coffeebeen.abicarsonbrown.com",
-      github_client: "https://github.com/AbiCarsonBrown/CoffeeBeen",
-      github_server: "https://github.com/AbiCarsonBrown/CoffeeBeen-server",
+      github_1: "https://github.com/AbiCarsonBrown/CoffeeBeen",
+      github_2: "https://github.com/AbiCarsonBrown/CoffeeBeen-server",
       description:
-        "Bringing together front-end and back-end development skills to create a web application to find and review coffee shops around London, illustrated using the GoogleMaps API.",
+        "Bringing together front-end (React) and back-end (Express) development skills to create a web application to find and review coffee shops around London, illustrated using the GoogleMaps API.",
       images: [
-        shopDeskCB,
-        shopMobCB,
         homeDeskCB,
         homeMobCB,
+        shopDeskCB,
+        shopMobCB,
         loginMobCB,
         profileTabCB,
       ],
@@ -41,17 +41,19 @@ export default function Projects() {
     {
       name: "PlanPal",
       url: "",
-      github_client: "https://github.com/AbiCarsonBrown/PlanPal",
-      github_server: "",
-      description: "Hackathon",
+      github_1: "https://github.com/AbiCarsonBrown/PlanPal",
+      github_2: "",
+      description:
+        "Live your dreams, plan your perfect holiday with this AI driven travel agent app. 6 hour hackathon JavaScript project, working in collaboration with Rory Doak and Zeid Bsaibes",
       images: [homePP, formPP, loadingPP, resultPP],
     },
     {
       name: "whY",
       url: "",
-      github_client: "https://github.com/AbiCarsonBrown/whY",
-      github_server: "",
-      description: "Hackathon",
+      github_1: "https://github.com/AbiCarsonBrown/whY",
+      github_2: "",
+      description:
+        "A social media that ask the question whY? 24 hour hackathon full-stack JavaScript project, working in collaboration with Leighton Guang.",
       images: [homeWhy, newWhy, addWhy, signUpWhy, formValidWhy],
     },
   ];
@@ -59,12 +61,13 @@ export default function Projects() {
   return (
     <main className="projects">
       <Project project={projects[activeProjectIndex]} />
-      <GalleryButtons
-        className="projects__buttons"
-        galleryArray={projects}
-        activeIndex={activeProjectIndex}
-        setActiveIndex={setActiveProjectIndex}
-      />
+      <div className="projects__buttons">
+        <GalleryButtons
+          galleryArray={projects}
+          activeIndex={activeProjectIndex}
+          setActiveIndex={setActiveProjectIndex}
+        />
+      </div>
     </main>
   );
 }

@@ -2,22 +2,12 @@
 @use "../../styles/partials/mixins" as *;
 
 .buttons {
-  grid-column-start: 1;
-  grid-column-end: 16;
-
-  @include mobile-l {
-    grid-column-end: 17;
-  }
-
-  @include tablet {
-    padding: 1.4rem 0;
-  }
-
   &__index {
     background-color: $grid-line;
-    height: 1rem;
-    width: 1rem;
+    height: 0.75rem;
+    width: 0.75rem;
     border-radius: 1rem;
+    margin: 0.1rem;
 
     &--active {
       background-color: $primary;
@@ -25,6 +15,6 @@
   }
 
   &__icon {
-    height: 1rem;
+    height: 0.75rem;
   }
 }

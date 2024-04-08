@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Project.scss";
 import { useState } from "react";
 import Web from "../../assets/icons/Web.svg";
-import GitHub from "../../assets/icons/GitHub.svg";
+import GitHub from "../../assets/icons/GitHub-footer.svg";
 import GalleryButtons from "../GalleryButtons/GalleryButtons";
 
 export default function Project({ project }) {
@@ -23,10 +23,10 @@ export default function Project({ project }) {
             <p className="project__link-label">Website</p>
           </Link>
         )}
-        {project.github_client && (
+        {project.github_1 && (
           <Link
             target="_blank"
-            to={project.github_client}
+            to={project.github_1}
             className="project__link project__link--client"
           >
             <img
@@ -34,13 +34,15 @@ export default function Project({ project }) {
               alt="GitHub icon"
               className="project__link-icon"
             />
-            <p className="project__link-label">Client</p>
+            <p className="project__link-label">
+              {project.github_2 ? "Client" : "GitHub"}
+            </p>
           </Link>
         )}
-        {project.github_server && (
+        {project.github_2 && (
           <Link
             target="_blank"
-            to={project.github_server}
+            to={project.github_2}
             className="project__link project__link--server"
           >
             <img
@@ -58,12 +60,13 @@ export default function Project({ project }) {
           alt={`${project.name} gallery image`}
           className="project__img"
         />
-
-        <GalleryButtons
-          galleryArray={project.images}
-          activeIndex={activeImageIndex}
-          setActiveIndex={setActiveImageIndex}
-        />
+        <div className="project__buttons">
+          <GalleryButtons
+            galleryArray={project.images}
+            activeIndex={activeImageIndex}
+            setActiveIndex={setActiveImageIndex}
+          />
+        </div>
       </div>
     </article>
   );

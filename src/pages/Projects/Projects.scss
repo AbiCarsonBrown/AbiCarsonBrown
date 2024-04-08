@@ -4,26 +4,38 @@
 .projects {
   display: grid;
   justify-items: center;
-  grid-template-rows: repeat(24, $mobile-s-grid);
+  grid-template-rows: repeat(25, $mobile-s-grid);
   grid-template-columns: repeat(15, $mobile-s-grid);
-  margin-bottom: $mobile-s-grid;
 
   @include mobile-m {
     grid-template-rows: repeat(24, $mobile-m-grid);
     grid-template-columns: repeat(15, $mobile-m-grid);
-    margin-bottom: $mobile-m-grid;
   }
 
   @include mobile-l {
-    grid-template-rows: repeat(24, $mobile-l-grid);
+    grid-template-rows: repeat(22, $mobile-l-grid);
     grid-template-columns: repeat(15, $mobile-l-grid);
-    margin-bottom: $mobile-l-grid;
   }
 
   @include tablet {
     grid-template-rows: repeat(21, $tablet-grid);
     grid-template-columns: repeat(13, $tablet-grid);
-    margin-bottom: $tablet-grid;
     margin-left: $tablet-grid;
+  }
+
+  &__buttons {
+    display: grid;
+    grid-row: 24;
+    grid-column-start: 1;
+    grid-column-end: 16;
+    align-items: center;
+
+    @include mobile-l {
+      grid-column-end: 17;
+    }
+
+    @include tablet {
+      padding: 1.4rem 0;
+    }
   }
 }

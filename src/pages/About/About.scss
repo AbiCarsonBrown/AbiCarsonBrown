@@ -6,7 +6,7 @@
   grid-template-rows: repeat(25, $mobile-s-grid);
 
   @include mobile-m {
-    grid-template-rows: repeat(22, $mobile-m-grid);
+    grid-template-rows: repeat(24, $mobile-m-grid);
   }
 
   @include mobile-l {
