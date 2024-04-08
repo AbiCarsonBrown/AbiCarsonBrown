@@ -3,27 +3,32 @@
 
 .contact {
   display: grid;
-  grid-template-rows: repeat(4, $mobile-s-grid);
-  grid-template-columns: repeat(30, calc($mobile-s-grid / 2));
+  justify-content: center;
 
-  @include mobile-m {
-    grid-template-rows: repeat(4, $mobile-m-grid);
-    grid-template-columns: repeat(30, calc($mobile-m-grid / 2));
-  }
+  &__container {
+    display: grid;
+    grid-template-rows: repeat(4, $mobile-s-grid);
+    grid-template-columns: repeat(30, calc($mobile-s-grid / 2));
 
-  @include mobile-l {
-    grid-template-rows: repeat(4, $mobile-l-grid);
-    grid-template-columns: repeat(30, calc($mobile-l-grid / 2));
-  }
+    @include mobile-m {
+      grid-template-rows: repeat(4, $mobile-m-grid);
+      grid-template-columns: repeat(30, calc($mobile-m-grid / 2));
+    }
 
-  @include tablet {
-    grid-template-rows: repeat(10, $tablet-grid);
-    grid-template-columns: repeat(18, calc($tablet-grid / 2));
-  }
+    @include mobile-l {
+      grid-template-rows: repeat(4, $mobile-l-grid);
+      grid-template-columns: repeat(30, calc($mobile-l-grid / 2));
+    }
 
-  @include laptop {
-    grid-template-rows: repeat(10, $laptop-grid);
-    grid-template-columns: repeat(18, calc($laptop-grid / 2));
+    @include tablet {
+      grid-template-rows: repeat(10, $tablet-grid);
+      grid-template-columns: repeat(18, calc($tablet-grid / 2));
+    }
+
+    @include laptop {
+      grid-template-rows: repeat(10, $laptop-grid);
+      grid-template-columns: repeat(18, calc($laptop-grid / 2));
+    }
   }
 
   &__link {
@@ -32,6 +37,19 @@
     grid-row-start: 1;
     grid-row-end: 3;
     width: calc($mobile-s-grid * 3);
+
+    @include mobile-m {
+      width: calc($mobile-m-grid * 3);
+    }
+
+    @include mobile-l {
+      width: calc($mobile-l-grid * 3);
+    }
+
+    @include tablet {
+      grid-column-start: 8;
+      grid-column-end: 11;
+    }
 
     &--email {
       grid-column-start: 4;
@@ -59,11 +77,6 @@
         grid-row-end: 11;
       }
     }
-
-    @include tablet {
-      grid-column-start: 8;
-      grid-column-end: 11;
-    }
   }
 
   &__icon {
@@ -88,6 +101,14 @@
 
     &--in {
       width: calc($mobile-s-grid * 3 / 2);
+
+      @include mobile-m {
+        width: calc($mobile-m-grid * 3 / 2);
+      }
+
+      @include mobile-l {
+        width: calc($mobile-l-grid * 3 / 2);
+      }
     }
   }
 }
