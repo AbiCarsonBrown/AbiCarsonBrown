@@ -22,6 +22,9 @@
     grid-template-rows: repeat(21, $tablet-grid);
     grid-template-columns: repeat(13, $tablet-grid);
     margin-left: $tablet-grid;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 
   @include laptop {
@@ -31,7 +34,8 @@
   }
 
   @include desktop {
-    grid-template-columns: repeat(24, $laptop-grid);
+    grid-template-columns: repeat(17, $laptop-grid);
     margin-left: calc($laptop-grid * 4);
+    margin-right: calc($laptop-grid * 3);
   }
 }
