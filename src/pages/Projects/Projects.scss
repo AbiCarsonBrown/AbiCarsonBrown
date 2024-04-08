@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .projects {
+  position: relative;
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(25, $mobile-s-grid);
@@ -32,29 +33,5 @@
   @include desktop {
     grid-template-columns: repeat(24, $laptop-grid);
     margin-left: calc($laptop-grid * 4);
-  }
-
-  &__buttons {
-    display: grid;
-    grid-row: 24;
-    grid-column-start: 1;
-    grid-column-end: 16;
-    align-items: center;
-
-    @include mobile-m {
-      grid-row: 23;
-    }
-
-    @include mobile-l {
-      grid-row: 21;
-      grid-column-end: 17;
-    }
-
-    @include tablet {
-      grid-row: 20;
-    }
-    @include laptop {
-      grid-column-end: 18;
-    }
   }
 }

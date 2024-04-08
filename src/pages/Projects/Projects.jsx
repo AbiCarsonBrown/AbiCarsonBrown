@@ -1,5 +1,6 @@
 import "./Projects.scss";
 import Project from "../../components/Project/Project";
+import Gallery from "../../components/Gallery/Gallery";
 import { useState } from "react";
 import shopDeskCB from "../../assets/coffeebeen/coffeeshop-desktop.png";
 import shopMobCB from "../../assets/coffeebeen/coffeeshop-mobile.png";
@@ -61,19 +62,18 @@ export default function Projects() {
 
   return (
     <main className="projects">
-      <Project
-        project={projects[activeProjectIndex]}
-        activeImageIndex={activeImageIndex}
-        setActiveImageIndex={setActiveImageIndex}
-      />
-      <div className="projects__buttons">
-        <GalleryButtons
-          galleryArray={projects}
-          activeIndex={activeProjectIndex}
-          setActiveIndex={setActiveProjectIndex}
-          setSecondaryIndex={setActiveImageIndex}
+      <Gallery
+        galleryArray={projects}
+        activeIndex={activeProjectIndex}
+        setActiveIndex={setActiveProjectIndex}
+        setSecondaryIndex={setActiveImageIndex}
+      >
+        <Project
+          project={projects[activeProjectIndex]}
+          activeImageIndex={activeImageIndex}
+          setActiveImageIndex={setActiveImageIndex}
         />
-      </div>
+      </Gallery>
     </main>
   );
 }
