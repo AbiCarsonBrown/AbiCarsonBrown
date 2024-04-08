@@ -24,9 +24,14 @@
   }
 
   @include laptop {
-    grid-template-rows: repeat(20, $laptop-grid);
+    grid-template-rows: repeat(21, $laptop-grid);
     grid-template-columns: repeat(17, $laptop-grid);
     margin-left: $laptop-grid;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(24, $laptop-grid);
+    margin-left: calc($laptop-grid * 4);
   }
 
   &__buttons {
