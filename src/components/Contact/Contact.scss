@@ -47,16 +47,15 @@
     }
 
     @include tablet {
-      grid-column-start: 8;
-      grid-column-end: 11;
+      height: calc($tablet-grid * 3);
     }
 
     &--email {
       grid-column-start: 4;
 
       @include tablet {
-        grid-row-start: 2;
-        grid-row-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
       }
     }
 
@@ -64,8 +63,8 @@
       grid-column-start: 13;
 
       @include tablet {
-        grid-row-start: 5;
-        grid-row-end: 8;
+        grid-row-start: 4;
+        grid-row-end: 7;
       }
     }
 
@@ -73,9 +72,14 @@
       grid-column-start: 22;
 
       @include tablet {
-        grid-row-start: 8;
-        grid-row-end: 11;
+        grid-row-start: 7;
+        grid-row-end: 10;
       }
+    }
+
+    @include tablet {
+      grid-column-start: 8;
+      grid-column-end: 11;
     }
   }
 
@@ -108,6 +112,10 @@
 
       @include mobile-l {
         width: calc($mobile-l-grid * 3 / 2);
+      }
+
+      @include tablet {
+        width: calc($tablet-grid * 3 / 2);
       }
     }
   }
