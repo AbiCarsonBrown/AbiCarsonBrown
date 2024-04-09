@@ -8,7 +8,6 @@ import homeDeskCB from "../../assets/coffeebeen/home-desktop.png";
 import homeMobCB from "../../assets/coffeebeen/home-mobile-list.png";
 import loginMobCB from "../../assets/coffeebeen/login-mobile.png";
 import profileTabCB from "../../assets/coffeebeen/profile-tablet.png";
-import GalleryButtons from "../../components/GalleryButtons/GalleryButtons";
 import homePP from "../../assets/planpal/homepage.png";
 import formPP from "../../assets/planpal/form-complete.png";
 import loadingPP from "../../assets/planpal/loading.png";

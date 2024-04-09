@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./Project.scss";
 import Web from "../../assets/icons/Web.svg";
 import GitHub from "../../assets/icons/GitHub-footer.svg";
-import GalleryButtons from "../GalleryButtons/GalleryButtons";
 import Gallery from "../Gallery/Gallery";
 
 export default function Project({
