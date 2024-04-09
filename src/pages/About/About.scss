@@ -16,6 +16,9 @@
   @include tablet {
     grid-template-rows: repeat(21, $tablet-grid);
     margin-left: $tablet-grid;
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 
   @include laptop {

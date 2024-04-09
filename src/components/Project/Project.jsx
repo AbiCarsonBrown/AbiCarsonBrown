@@ -3,6 +3,7 @@ import "./Project.scss";
 import Web from "../../assets/icons/Web.svg";
 import GitHub from "../../assets/icons/GitHub-footer.svg";
 import GalleryButtons from "../GalleryButtons/GalleryButtons";
+import Gallery from "../Gallery/Gallery";
 
 export default function Project({
   project,
@@ -56,18 +57,18 @@ export default function Project({
         )}
       </div>
       <div className="project__gallery">
-        <img
-          src={project.images[activeImageIndex]}
-          alt={`${project.name} gallery image`}
-          className="project__img"
-        />
-        <div className="project__buttons">
-          <GalleryButtons
-            galleryArray={project.images}
-            activeIndex={activeImageIndex}
-            setActiveIndex={setActiveImageIndex}
+        <Gallery
+          galleryArray={project.images}
+          activeIndex={activeImageIndex}
+          setActiveIndex={setActiveImageIndex}
+          type="image"
+        >
+          <img
+            src={project.images[activeImageIndex]}
+            alt={`${project.name} gallery image`}
+            className="project__img"
           />
-        </div>
+        </Gallery>
       </div>
     </article>
   );

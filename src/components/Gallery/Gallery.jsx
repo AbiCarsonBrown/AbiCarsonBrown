@@ -8,6 +8,7 @@ export default function Gallery({
   activeIndex,
   setActiveIndex,
   setSecondaryIndex,
+  type,
 }) {
   const count = galleryArray.length;
 
@@ -32,22 +33,26 @@ export default function Gallery({
   return (
     <>
       <button
-        className="gallery__direction gallery__direction--prev"
+        className={`gallery__direction gallery__direction--prev gallery__direction--${type} gallery__direction--${type}-prev`}
         onClick={() => {
           moveGallery("prev");
         }}
       >
-        <img className="gallery__icon" src={Prev} alt="Chevron left icon" />
+        <img
+          className={`gallery__icon gallery__icon--${type}`}
+          src={Prev}
+          alt="Chevron left icon"
+        />
       </button>
 
       {children}
 
-      <div className="gallery__buttons">
+      <div className={`gallery__buttons gallery__buttons--${type}`}>
         {galleryArray.map((_item, index) => {
           return (
             <button
               key={index}
-              className={`gallery__index ${
+              className={`gallery__index gallery__index--${type} ${
                 index === activeIndex ? "gallery__index--active" : ""
               }`}
               onClick={() => {
@@ -59,12 +64,16 @@ export default function Gallery({
       </div>
 
       <button
-        className="gallery__direction gallery__direction--next"
+        className={`gallery__direction gallery__direction--next gallery__direction--${type} gallery__direction--${type}-next`}
         onClick={() => {
           moveGallery("next");
         }}
       >
-        <img className="gallery__icon" src={Next} alt="Chevron right icon" />
+        <img
+          className={`gallery__icon gallery__icon--${type}`}
+          src={Next}
+          alt="Chevron right icon"
+        />
       </button>
     </>
   );

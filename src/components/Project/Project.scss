@@ -171,24 +171,27 @@
   }
 
   &__gallery {
+    background-color: black;
+    position: relative;
     display: grid;
-    grid-template-rows: repeat(23, calc($mobile-s-grid / 2));
+    grid-template-rows: repeat(19, calc($mobile-s-grid / 2));
     grid-template-columns: 100%;
     justify-items: center;
     align-items: center;
     grid-row-start: 22;
     grid-row-end: 44;
+    padding: 0.85rem;
 
     @include mobile-m {
       grid-row-start: 18;
       grid-row-end: 42;
-      grid-template-rows: repeat(25, calc($mobile-m-grid / 2));
+      grid-template-rows: repeat(21, calc($mobile-m-grid / 2));
     }
 
     @include mobile-l {
       grid-row-start: 18;
       grid-row-end: 38;
-      grid-template-rows: repeat(23, calc($mobile-m-grid / 2));
+      grid-template-rows: repeat(20, calc($mobile-m-grid / 2));
     }
 
     @include tablet {
@@ -198,7 +201,7 @@
     }
 
     @include laptop {
-      grid-template-rows: repeat(20, calc($laptop-grid / 2));
+      grid-template-rows: repeat(18, calc($laptop-grid / 2));
     }
   }
 
@@ -206,36 +209,22 @@
     max-width: 100%;
     max-height: 100%;
     grid-row-start: 1;
-    grid-row-end: 21;
+    grid-row-end: 19;
 
     @include mobile-m {
-      grid-row-start: 2;
-      grid-row-end: 23;
+      grid-row-end: 21;
     }
 
     @include mobile-l {
-      grid-row-end: 22;
+      grid-row-end: 20;
     }
 
     @include tablet {
-      grid-row-start: 1;
       grid-row-end: 18;
-    }
-  }
-
-  &__buttons {
-    grid-row-start: 22;
-
-    @include mobile-m {
-      grid-row: 24;
-    }
-
-    @include mobile-l {
-      grid-row: 23;
     }
 
     @include laptop {
-      grid-row: 19;
+      grid-row-end: 18;
     }
   }
 }

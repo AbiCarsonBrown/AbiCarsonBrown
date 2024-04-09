@@ -67,6 +67,7 @@ export default function Projects() {
         activeIndex={activeProjectIndex}
         setActiveIndex={setActiveProjectIndex}
         setSecondaryIndex={setActiveImageIndex}
+        type="project"
       >
         <Project
           project={projects[activeProjectIndex]}
